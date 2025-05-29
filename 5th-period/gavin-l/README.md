@@ -1,39 +1,39 @@
-# Final Portfolio Project – Gavin S.
+# Final Portfolio Project – Gavin L.
 
 ## About Me
 
-Hi, I'm Gavin S., a dedicated student developer passionate about learning new technologies and building engaging web applications. Throughout my development journey, I've focused on improving my skills in front-end and back-end development, exploring how thoughtful design and clean code come together to create powerful user experiences. I enjoy problem-solving and continuously strive to grow as a developer by taking on new challenges and learning from each project.
+Hello! I'm Gavin L., a student at Mt. Eden High School with a growing interest in computer science and mathematics. I’m currently exploring different paths in tech and considering pursuing a degree in a related field at a four-year university. This portfolio represents not only my technical work but also my progress and curiosity as a student developer.
 
-## Project Overview
+## What This Project Is
 
-This portfolio represents the culmination of my work and learning throughout the year. It showcases the skills I've developed and the projects I've built, reflecting my growth as a developer. Creating this portfolio helped me gain a deeper understanding of responsive design, project structure, and the importance of clear documentation. It also taught me how to present my work professionally and highlight my capabilities effectively.
+This is my final portfolio project for the year, and it showcases several interactive programs and games I’ve built using languages like C++ and JavaScript. Through this course, I’ve learned the fundamentals of programming, how to build user interfaces, and the importance of collaboration in development. My problem-solving skills have grown significantly, and I’ve gained a solid foundation in creating functional, engaging digital experiences.
 
-## Portfolio Features
+## Portfolio Overview
 
-My portfolio site includes:
+My portfolio website includes:
 
-- A responsive, mobile-friendly design
-- A clean and intuitive user interface
-- A homepage introducing who I am as a developer
-- A section showcasing multiple development projects
-- Links to project repositories and live demos (when applicable)
-- Contact information for networking or collaboration opportunities
+- A visually styled homepage with sections for navigation
+- A detailed **About Me** section
+- A summary of key **Things I Learned** during the year
+- An interactive **Projects** section with playable demos and project descriptions
+- Embedded images and links for each project
 
 ## Featured Projects
 
-- **Weather Dashboard**  
-  A web app that allows users to search for current weather and 5-day forecasts by city. It uses the OpenWeather API and displays real-time data in a user-friendly format.
+### 🎰 Casino Game
+Built in C++, this project includes a slot machine and coin flip game. It offers a fun, interactive way to simulate casino games and was created in collaboration with Angel Ho.
 
-- **Task Tracker**  
-  A simple yet effective task management tool where users can create, update, and delete tasks. Built with JavaScript and localStorage to persist data.
+### 💬 Quote Generator
+Generates over 20 quotes from three unique topics. Users can select a category or get a random quote. This project was created in collaboration with Elisa Gomez Mascareno.
 
-- **Movie Explorer**  
-  An interactive app that allows users to search for movies using the OMDB API. It displays movie posters, ratings, and summaries, and includes search history functionality.
-
-- **Personal Blog Template**  
-  A clean and responsive blog layout built with HTML and CSS, ready for content. This project emphasizes layout design and typography.
+### 🚦 Red Light Green Light Game
+A keyboard-controlled game based on the childhood classic. Players must reach the finish line by only moving during green or white lights—movement during red results in a game over. Built with help from Angel Ho, Dominick Lualhati, and David Ramos.
 
 ## Links
 
-- 🔗 [GitHub Repository](https://github.com/Gavin15716/FINAL-PROJECT)  
-- 🌐 [Live Site on GitHub Pages](https://gavin15716.github.io/FINAL-PROJECT/)
+- **GitHub Repository:** [https://github.com/Gavin15716/FINAL-PROJECT](https://github.com/Gavin15716/FINAL-PROJECT)
+- **Live Website:** [https://gavin15716.github.io/FINAL-PROJECT/](https://gavin15716.github.io/FINAL-PROJECT/)
+
+---
+
+Thanks for visiting my portfolio!
