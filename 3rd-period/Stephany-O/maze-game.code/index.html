@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            background-color: #FFEBB7; /* Light yellow like a cat's fur */
+            color: #4E4B3D; /* Dark brown text for contrast */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+        }
+
+        #container1 {
+            background-color: #FFA726; /* Bright orange */
+            padding: 50px 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #title {
+            font-size: 26px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #FF6F00; /* Darker orange for title */
+        }
+
+        #green-text {
+            color: #FF8C00; /* Orange-yellow to complement the theme */
+        }
+
+        #description {
+            margin-top: 1px;
+            margin-bottom: 25px;
+            color: #4E4B3D; /* Dark text for readability */
+            text-align: center;
+        }
+
+        #btn1 {
+            background-color: #FF5722; /* Bright red-orange button */
+            color: #FFFFFF;
+            width: 200px;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 5px;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #btn1:hover {
+            background-color: #FF7043; /* Light orange for hover */
+        }
+
+        .passwords-container {
+            margin: 16px auto;
+            text-align: center;
+            width: 100%;
+        }
+
+        .passwords {
+            margin: 10px;
+            width: 250px;
+            display: inline-block;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #FFCC80; /* Soft orange for password container */
+            color: #4E4B3D;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        hr {
+            color: #FF6F00;
+            border: 1px solid #FF6F00;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <h1 id="title">Generate a <span id="green-text">random password</span></h1>
+        <p id="description">Never use an insecure password again!</p>
+        <button id="btn1">Generate Password</button>
+        <hr>
+        <div class="passwords-container">
+            <span class="passwords" id="password1"></span>
+            <span class="passwords" id="password2"></span>
+        </div>
+    </div>
+    <script>
+        const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+
+        function generatePassword() {
+            function getRandomPassword() {
+                let password = "";
+                for (let i = 0; i < 14; i++) {
+                    let randomNumber = Math.floor(Math.random() * characters.length);
+                    password += characters[randomNumber];
+                }
+                return password;
+            }
+
+            document.getElementById("password1").textContent = getRandomPassword();
+            document.getElementById("password2").textContent = getRandomPassword();
+        }
+
+        document.getElementById("btn1").addEventListener("click", generatePassword);
+    </script>
+</body>
+</html>
