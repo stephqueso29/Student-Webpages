@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff8e1; /* Soft yellow background to match the cat theme */
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+            padding-bottom: 100px; /* Ensure space for footer */
+        }
+
+        /* Header */
+        header {
+            background-color: #ff9f00; /* Bright orange */
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around; /* Distribute buttons evenly across header */
+            align-items: center;
+            border-radius: 10px;
+            margin: 20px auto;
+            font-size: 1.5rem;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Header Buttons */
+        header button {
+            background-color: #ff6f00;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 0 10px; /* Add some spacing between buttons */
+        }
+
+        header button:hover {
+            background-color: #ff9f00;
+            transform: scale(1.05);
+        }
+
+        /* New Heading with Buttons */
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn-container h2 {
+            font-size: 2rem;
+            color: #ff6f00;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .btn-container button {
+            background-color: #ff9f00;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-container button:hover {
+            background-color: #ff6f00;
+            transform: scale(1.05);
+        }
+
+        /* About Me Section */
+        #home, #about-me, #projects, #contact {
+            margin-top: 50px;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #fff3e0; /* Soft orange background */
+            width: 80%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Content Styles */
+        p, ul, ol {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #ffe0b2; /* Light orange background for items */
+            margin: 10px 0;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+        }
+
+        /* Links */
+        a {
+            color: #ff6f00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ff9f00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #ff9f00;
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Image Styling */
+        #cat-image {
+            width: 100%;
+            height: auto;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Overlay Text Styling */
+        #image-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                width: 90%;
+            }
+
+            #cat-image {
+                width: 80%;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header button {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Home, About Me, Projects, and Contact Buttons -->
+    <header>
+        <button onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Home</button>
+        <button onclick="document.getElementById('about-me').scrollIntoView({behavior: 'smooth'})">About Me</button>
+        <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact</button>
+    </header>
+
+    <!-- Cat on Computer Image with Text Overlay -->
+    <div style="position: relative;">
+        <img id="cat-image" src="https://t3.ftcdn.net/jpg/02/18/45/30/360_F_218453068_WRjhtH9MzO33Cb19K8acZI2VZvXueQ70.jpg" alt="Cat on Computer" />
+        <div id="image-text">Hello World! Welcome to my project webpage!</div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about-me">
+        <h2>About Me</h2>
+        <p>Hi, I'm Stephany! I'm currently a senior at Mt. Eden High School. In this page I will display the variety of projects that were made in APCSP! Although these are probably mediocore, they are still worth looking at in my opinion. I have learned a lot from this class such as how to code in different languages such as javascript and c++. Honeslt my favorite part about coding these projects has to be the CSS, its so fun! Thank you and Good bye!</p>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects">
+        <h2>Projects!</h2>
+          <!-- Link to a project (GitHub, etc.) -->
+    <p>Check out my <a href="https://stephqueso29.github.io/Maze-Game-/" target="_blank" style="color: #ff6f00;">Random Password Generator</a>!</p>
+        <li> This is a random password generator! It makes sure to include random letters and symbols to keep the hackers away from your private information</li>
+         <p>Check out my <a href="https://stephqueso29.github.io/Sanrio-Quiz/" target="_blank" style="color: #ff6f00;">Sanrio Quiz</a>!</p>
+        <li> If you are a true Sanrio Fan then take thsi quiz! It quizzes you on the chracters apprearance and lore.</li>
+        <p>Check out my <a href="https://stephqueso29.github.io/cat-image-generator-/" target="_blank" style="color: #ff6f00;">Cat Image Generator</a>!</p>
+        <li> If you're feeling an emotion strongly then try this cat image generator to match your mood! There are four types of emotions on there: happy, sad, angry, surprised.</li>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <h2>Contact Info</h2>
+        <p>Feel free to reach out on <a href="https://www.instagram.com/st.ephany6847?igsh=NTc4MTIwNjQ2%3D%3D" target="_blank">Instagram</a>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Comp-Sci Webpage</p>
+    </footer>
+
+</body>
+</html>
