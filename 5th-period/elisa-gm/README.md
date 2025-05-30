@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-This website contains my portfolio and description about who I am as a programmer. Through this website I share my journey throughout this year in AP Computer Science. This website holds various of my projects worked on throughout this school year, here is my description on each project and an explanation for each project's purpose. -
+This website contains my portfolio and description about who I am as a programmer. In this website I share my journey throughout this school year in AP Computer Science Principles. This website holds various of my projects worked on throughout the year, here is my description on each project and an explanation for each project's purpose. -
 
 Card Memory Game - In a group of three, my group and I followed a tutorial on how to create a card game we found online. Using JavaScript, we went through trial and error in building our code and project's functionality. The user is meant to flip a card and match up the pairs based on memory of location (each card is placed in a different location at random at the start of the game). At any given time they can reset the game, but it's more fun to attempt to get all the way through!
 
@@ -37,7 +37,7 @@ A random quote generator created with JavaScript, allowing users to cycle throug
 ## Links
 
 - [GitHub Repository](https://github.com/elisamgm/elisamgmFP.GitHub.io)
-- Live Website: [(https://elisamgm.github.io/elisamgmFP.GitHub.io/)]
+- [Live Website](https://elisamgm.github.io/elisamgmFP.GitHub.io/)
 
 ---
 
