@@ -3,110 +3,224 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sanrio Character Quiz</title>
+  <title>My Personal Webpage</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #FFEBB7; 
-      color: #4E4B3D; 
-      padding: 20px;
-    }
-    .quiz-container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #FFF4E1; 
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 15px #FFA500; 
-    }
-    h1 {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff8e1;
+      color: #333;
       text-align: center;
-      color: #FF8C00; 
+      line-height: 1.6;
+      padding-bottom: 100px;
     }
-    .question {
-      margin-bottom: 15px;
-      font-size: 18px;
-      color: #FF6F00; 
-    }
-    button {
-      background-color: #FFB74D; 
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      border-radius: 5px;
-      margin-top: 10px; 
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #FF9800; 
-    }
-    .result {
-      font-weight: bold;
-      color: #FF5722; 
-      margin-top: 15px;
-    }
-    img {
-      max-width: 250px;
+
+    header {
+      background-color: #ff6f00; 
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
       border-radius: 10px;
-      display: block;
+      margin: 20px auto;
+      font-size: 1.5rem;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    header button {
+      background-color: #ff6f00; 
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin: 0 10px;
+    }
+
+    header button:hover {
+      background-color: #ff9f00;
+      transform: scale(1.05);
+    }
+
+    .btn-container {
+      margin-top: 30px;
+    }
+
+    .btn-container h2 {
+      font-size: 2rem;
+      color: #ff6f00;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .btn-container button {
+      background-color: #ff9f00;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 25px;
+      margin: 0 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-container button:hover {
+      background-color: #ff6f00;
+      transform: scale(1.05);
+    }
+
+    #home, #about-me, #projects, #contact {
+      margin-top: 50px;
+      padding: 40px;
+      border-radius: 15px;
+      background-color: #fff3e0;
+      width: 80%;
+      max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    p, ul, ol {
+      font-size: 1.2rem;
+      margin: 15px 30px;
+      text-align: left;
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #ffe0b2;
+      margin: 20px 30px;
+      padding: 12px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      
+    }
+
+    a {
+      color: #ff6f00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #ff9f00;
+    }
+
+    footer {
+      background-color: #ff9f00;
+      color: #fff;
+      padding: 10px;
+      font-size: 0.9rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    #cat-image {
+      width: 100%;
+      height: auto;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #image-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        width: 90%;
+      }
+
+      #cat-image {
+        width: 80%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header button {
+        margin-bottom: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>Sanrio Character Quiz</h1>
-    <img src="https://images.surferseo.art/046af0ab-6e03-4ccf-916e-7f1c376627b2.png" alt="Sanrio Characters">
 
-    <div class="question">
-      <p>1. Which Sanrio character was in the boy cried wolf?</p>
-      <input type="radio" name="q1" value="My Melody" /> My Melody<br />
-      <input type="radio" name="q1" value="Badtz-maru" /> Badtz-maru<br />
-      <input type="radio" name="q1" value="Hello Kitty" /> Hello Kitty<br />
-    </div>
+  <header>
+    <button onclick="document.getElementById('home').scrollIntoView({behavior: 'smooth'})">Home</button>
+    <button onclick="document.getElementById('about-me').scrollIntoView({behavior: 'smooth'})">About Me</button>
+    <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Projects</button>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Contact</button>
+  </header>
 
-    <div class="question">
-      <p>2. Which Sanrio character is black and has a blue collar?</p>
-      <input type="radio" name="q2" value="Pompompurin" /> Pompompurin<br />
-      <input type="radio" name="q2" value="Chococat" /> Chococat<br />
-      <input type="radio" name="q2" value="Keroppi" /> Keroppi<br />
-    </div>
-
-    <div class="question">
-      <p>3. Which Sanrio character is a mischievous rival of My Melody?</p>
-      <input type="radio" name="q3" value="Kuromi" /> Kuromi<br />
-      <input type="radio" name="q3" value="Chococat" /> Chococat<br />
-      <input type="radio" name="q3" value="Badtz-Maru" /> Badtz-Maru<br />
-    </div>
-
-    <button onclick="checkAnswers()">Submit Answers</button>
-    <div class="result" id="result"></div>
+  <div style="position: relative;">
+    <img id="cat-image" src="https://t3.ftcdn.net/jpg/02/18/45/30/360_F_218453068_WRjhtH9MzO33Cb19K8acZI2VZvXueQ70.jpg" alt="Cat on Computer" />
+    <div id="image-text">Hello World! Welcome to my project webpage!</div>
   </div>
 
-  <script> 
-    function checkAnswers() {
-      let score = 0;
-      const answers = {
-        q1: "Badtz-maru",
-        q2: "Chococat",
-        q3: "Kuromi"
-      };
+  <div id="about-me">
+    <h2>About Me</h2>
+    <p>Hi, I'm Stephany! I'm currently a senior at Mt. Eden High School. In this page I will display the variety of projects that were made in APCSP! Although these are probably mediocore, they are still worth looking at in my opinion. I have learned a lot from this class such as how to code in different languages such as javascript and c++. Honeslt my favorite part about coding these projects has to be the CSS, its so fun! Thank you and Good bye!</p>
+  </div>
 
-      for (let q in answers) {
-        let selected = document.querySelector(`input[name="${q}"]:checked`);
-        if (selected && selected.value === answers[q]) {
-          score++;
-        }
-      }
+  <div id="projects">
+    <h2>Projects!</h2>
 
-      const result = document.getElementById("result");
-      result.innerText = `You got ${score} out of 3 correct!`;
-    }
-  </script>
+    <p>🔐 <a href="https://stephqueso29.github.io/Maze-Game-/" target="_blank">Random Password Generator</a></p>
+    <li>A tool that creates secure, unique passwords using symbols and letters.</li>
+
+    <p>🎀 <a href="https://stephqueso29.github.io/Sanrio-Quiz/" target="_blank">Sanrio Quiz</a></p>
+    <li>Take a fun quiz to test your knowledge about Sanrio characters!</li>
+
+    <p>🐱 <a href="https://stephqueso29.github.io/cat-image-generator-/" target="_blank">Cat Image Generator</a></p>
+    <li>Select your mood and view a matching cat meme — happy, sad, angry, or surprised!</li>
+  </div>
+
+  <div id="contact">
+    <h2>Contact Info</h2>
+    <p>Feel free to reach out on <a href="https://www.instagram.com/st.ephany6847?igsh=NTc4MTIwNjQ2%3D%3D" target="_blank">Instagram</a>.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Comp-Sci Webpage</p>
+  </footer>
+
 </body>
 </html>
-
- 
-    
