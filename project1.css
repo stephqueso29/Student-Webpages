@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+
+  #content {
+    width: 250px;
+    border: 2px solid #ff0000;
+    font-size: 22px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  
+  #clickarea {
+    width: 500px;
+    height: 300px;
+    border: 2px solid #ff0000;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  
+  #start {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    line-height: 2.5;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ff1a1a, #cc0000);
+    box-shadow: 0 5px #990000;
+    transition: 0.2s;
+  }
+
+  #start:hover {
+    background: linear-gradient(145deg, #ff4d4d, #cc0000);
+  }
+
+  
+  #start:active {
+    box-shadow: 0 2px #990000;
+    transform: translate(-50%, -48%);
+  }
