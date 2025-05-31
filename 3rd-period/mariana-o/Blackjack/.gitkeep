@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <style>
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+            background-image: url("data:image/jpeg;base64,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");
+            background-size: cover;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            color: goldenrod;
+        }
+
+        #message-el {
+            font-style: italic;
+        }
+
+        button {
+            color: #016f32;
+            width: 150px;
+            background: goldenrod;
+            padding: 5px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p id="cards-el">Cards:</p>
+    <p id="sum-el">Sum:</p>
+    <button id="start-button">START GAME</button>
+    <button id="new-card-button">NEW CARD</button>
+    <p id="player-el"></p>
+
+    <script>
+        let cards = [];
+        let sum = 0;
+        let hasBlackJack = false;
+        let isAlive = false;
+        let message = "";
+
+        const messageEl = document.getElementById("message-el");
+        const sumEl = document.getElementById("sum-el");
+        const cardsEl = document.getElementById("cards-el");
+        const playerEl = document.getElementById("player-el");
+
+        let player = {
+            name: "Mariana",
+            money: 10000
+        };
+
+        playerEl.textContent = player.name + ": $" + player.money; //add your name to the player-el text content using JavaScript check to see how we did that for the password generator if you're not sure where to start
+
+        
+        function getRandomCard() { //create a function called getRandomCard()
+            let randNum = Math.floor(Math.random() * 13) + 1; //the function should generate a random number between 1 - 13
+            if (randNum > 10) {  //if the number is greater than 10 return 10
+                return 10;
+            } else if (randNum === 1) { // if the number is equal to 1 return 11
+                return 11;
+            } else { // else return the random number and close out the function
+                return randNum;
+            }
+        }
+
+        //next create a startGame() function
+        function startGame() { 
+            isAlive = true;  //we have a variable at the top that we have created that tells us if the user is alive when the game starts you should assign it a value, I will let you determine what value to assign it (hint: its a Boolean)
+            hasBlackJack = false;
+            let card1 = getRandomCard();
+            let card2 = getRandomCard(); // we also have two card variables, when we start the game you should assign it a random value luckily we created a function that generates random numbers between 1 - 13
+            cards = [card1, card2]; // after you have done that you can add the first and second card to your array you can do this by reassigning them to the array
+            sum = card1 + card2; // then make sure you update the current sum that the user has
+            renderGame(); //lastly you will call a function that we will create called renderGame()
+        } // you can then close the start game function
+
+        function renderGame() { //Now you will create the renderGame() function, which will render our game for us
+            cardsEl.textContent = "Cards: "; // the first thing we want to do is assign to our cardsEl element/variable this string "Cards: ";
+            for (let i = 0; i < cards.length; i++) { // next we want to loop through our cards array, this very similar to c++ 
+                cardsEl.textContent += cards[i] + " ";  // (hint: you can add the value of the cards by iterating through the array and indexing the values)
+            } // make sure the values are spaces out, now you can close the loop
+
+            sumEl.textContent = "Sum: " + sum; // next we will modify the text content for the sumEl to output "Sum: " + the actual sum variable
+
+            // now we want to make sure we add some logic to our game (the rules of the game)
+            if (sum <= 20) { 
+                message = "Do you want to draw a new card?"; // if the value the player has is less than 21 we should ask them if they want to draw a new card
+            } else if (sum === 21) {
+                message = "You got Blackjack!"; // else if its equal to 21 we should tell them they have blackjack and now we should update a variable we declared at the top but have not used yet
+                hasBlackJack = true;
+            } else {
+                message = "You are out of the game!";
+                isAlive = false; // else that means there's one condition left which would be that the user is out of the game and we should tell them that and we should update isAlive
+            }
+            messageEl.textContent = message; // lastly we should update the messageEl text content to contain the message that you generated in the if statements
+        } // now you can close the function
+
+        
+        function drawCard() { // The last function we have to create is called drawCard()
+            if (isAlive && !hasBlackJack) { // in this function we have to check if the user is still in the game if they are in the game and they don't have blackjack then they can draw a card
+                let card = getRandomCard(); // you should create a new variable called card and assign it a random number between 1-13
+                cards.push(card); // then you will push a value to your cards array (this will add a new value to the end of your array), the way you do this is by saying the nameOfArray.push(in here you put the value you want to add to the array), so for our array it would look like this cards.push(You need to figure out what value to insert in here)
+                sum += card; // don't forget to update the sum variable (hint: the new card would become part of the sum)
+                renderGame(); // lastly we will call the renderGame() and close out the if statement and we can also close the function
+            }
+        }
+
+        // Now you have all of your functions ready to go for the game to work 
+        // the only thing you have to do is map them to your buttons.
+        // when the user clicks start game something should happen
+        // when the user clicks new card something else should happen
+        // if the user is out of the game and they try to draw a card nothing should happen unless they start game again
+        // but that part should already be taken care of in one of the functions you created.
+        // as for what happens when the user clicks the buttons that's also already been taken care of you just need to make sure it happens when the button is clicked
+        // if you're not sure how to map it to a button, google addEventListener and try to figure out how to make something happen when the user clicks the button
+        document.getElementById("start-button").addEventListener("click", startGame);
+        document.getElementById("new-card-button").addEventListener("click", drawCard);
+      
+       //Make sure your statements use semicolons at the end
+       // Make sure your code is properly indented
+       // At this point your game should be up and running!
+       // Congrats you have created your first game!
+       // Personalize the webpage and change the CSS styles
+       // Make sure you submit a link to your game so that I can check the functionality and see the styles provided
+    </script>
+</body>
+</html>
