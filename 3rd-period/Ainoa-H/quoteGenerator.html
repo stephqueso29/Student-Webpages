@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="quoteGenerator.css">
+</head>
+<body>
+
+    <h1>Generate A Quote</h1>
+
+    <!-- Category: Motivational -->
+    <p class="message-el">Motivational</p> 
+    <p class="cards-el"></p>
+    <button onclick="generateQuote('motivational')">Generate</button> 
+
+    <!-- Category: Senior -->
+    <p class="message-el">Senior</p>
+    <p class="cards-el"></p>
+    <button onclick="generateQuote('senior')">Generate</button>
+
+    <!-- Category: Silly -->
+    <p class="message-el">Silly</p>
+    <p class="cards-el"></p>
+    <button onclick="generateQuote('silly')">Generate</button>
+    
+    <!-- Category: Ash -->
+    <p class="message-el">Ash</p>
+    <p class="cards-el"></p>
+    <button onclick="generateQuote('ash')">Generate</button>
+
+    <script>
+        // Object that stores different categories of quotes
+        const quotes = {
+            motivational: [
+                "To get something you never had, you have to do something you never did",
+                "Have to get comfortable with the uncomfortable", 
+                "Don't count the days, make the days count",
+                "Get up every day with a smile, go to sleep with a smile. You made it through another day.",
+                "A glowstick has to break before it glows"
+            ],
+            senior: [
+                "School was full of freaking packets yo",
+                "Los años pasan y el tiempo es oro, sé que algún día lo tendré todo.",
+                "School was ight, I give it a 20/25",
+                "Came for the huzz, leaving with the diplomuzz",
+                "That wasn't like High School Musical at all"
+            ],
+            silly: [
+                "In this world, you either crank that Soulja Boy or it cranks you.",
+                "If people are talking behind you, fart.",
+                "Your mom.",
+                "Whatever life throws at you, just dab and let it hit someone else.",
+                "I put the pro in procrastination."
+            ],
+            ash: [
+                "Drink water? Water is for fishes!",
+                "Vale Mas Que te Pasives EHH",
+                "Alexa, play Como La Flor",
+                "Double tap, guys!",
+                "I love messing up my liver so that way whenever I die nobody can take it."
+            ]
+        };
+
+        // Function that selects a random quote from the chosen category and displays it
+        function generateQuote(category) {
+            let categoryQuotes = quotes[category]; 
+            if (!categoryQuotes) return; // If the category doesn't exist, stop the function to prevent errors
+
+            let randomIndex = Math.floor(Math.random() * categoryQuotes.length); // Pick a random quote
+            let quote = categoryQuotes[randomIndex];
+
+            let messageElements = document.querySelectorAll(".message-el"); // Get all category labels
+            let cardsElements = document.querySelectorAll(".cards-el"); // Get all quote display areas
+
+            // Loop through all category labels and check if it matches the one clicked
+            for (let i = 0; i < messageElements.length; i++) {
+                if (messageElements[i].textContent.toLowerCase().trim() === category.toLowerCase().trim()) { 
+                    cardsElements[i].textContent = `"${quote}"`; // Display the selected quote
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

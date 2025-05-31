@@ -1,0 +1,33 @@
+body
+{
+  background-color: black;
+  color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#heading
+{
+  display: block;
+  width: 100%;
+}
+#game
+{
+  display: grid;
+}
+#grid
+{
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+}
+
+.cell
+{
+  border: 5px solid grey;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  font-size: 125px;
+  border-radius: 20px;
+} 

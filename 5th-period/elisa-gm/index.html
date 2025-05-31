@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Elisa Gomez Mascareno - Webpage & Portfolio</title>
+    <style>
+      div{
+        margin: 10px;
+        border: 5px solid white;
+        padding: 8px;
+      }
+      body {
+        font-family: 'Playfair Display Medium', 'PLayfair Display Normal';
+        background-color: #caf0f8;
+        color: #003049;
+        text-align:center;
+        font-size: 24px;
+      }
+      h1 {
+        color: #003049;
+        background-color: #f7ede2;
+        padding: 1rem;
+        border: solid white 1.8px;
+        border-radius: 50px;
+        margin-top: 0.25rem;
+        text-align: center;
+        text-shadow: 2px 2px #264653;
+      }
+      h2{
+        color: #264653;
+        text-align: center;
+      }
+      h3{
+        color: #264653;
+        text-align:center;
+      }
+      ul {
+    list-style-position: inside;
+}
+      img {
+        max-width: 100%;
+        border-radius: 20px;
+        border:solid white 5px;
+        
+      }
+      .contact {
+        background-color: #f7ede2;
+        padding: 1rem;
+        border-radius: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(18, 47, 92);
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #003049;
+      }
+      .div-wrapper{
+        display: grid;
+        grid-template-columns: repear(2, 1fr);
+        gap: 20px;
+        grid-template-areas:
+          "one two"
+          "three four"
+          "five six";
+        margin: 20px;
+      }
+      .one, .two, .three, .four, .five, .six{
+        border: 2px solid white;
+        padding: 5px;
+      }
+      .one { grid-area: one; }
+      .two { grid-area: two; }
+      .three { grid-area: three; }
+      .four { grid-area: four; }
+      .five { grid-area: five; }
+      .six { grid-area: six; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="https://www.theodysseyonline.com/media-library/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vbWVkaWEucmJsLm1zL2ltYWdlP3U9JTJGZmlsZXMlMkYyMDE3JTJGMDIlMkYwNSUyRjYzNjIxODUzNjc1MDUyNzc3MC0xNjg0OTA0ODk5X3RyYXZlbGluZy5qcGcmaG89aHR0cHMlM0ElMkYlMkZhejYxNjU3OC52by5tc2VjbmQubmV0JnM9OTM0Jmg9NWQxNTE4ZWYxYmIwZjliNWY5MGI2ZmMwN2QyY2Y3NzgyMjIzMDIyNDUwODk5NDlkNDU2MTRiNGJiZTgyMGIzYyZzaXplPTk4MHgmYz05NTY3OTg1NTciLCJleHBpcmVzX2F0IjoxNzkxNDk3MDUyfQ.9_NZWslgNpwjL9ROFTS3EVryEPtKNcySKiRlhoCugFQ/image.jpg?width=400&height=209">
+      <h1>Elisa Gomez Mascareno - Webpage & Portfolio</h1>
+      <h2>Elisa as a Coder</h2> 
+      <p>     Hi, welcome to my personal webpage and portfolio where you're able to see three projects I've created over the course of my AP Computer Science Principles class this 2024-2025 school year!
+        My name is Elisa Gomez Mascareno, currently a junior at Mt.Eden High School. Coming into this class I didn't know what to fully expect, other than the unexpected. The unexpected truly did happen, and this course truly taught me how crucial patience and critical thinking are in your biggest challenges. Although my goal for my education isn't to dive deeper into the computer science world, I've been able to develop a certain level of understanding to the point I can confidently say I've come far since the beginning of the school year. There's been a lot of problem solving as I go through and learn different concepts of coding. As I've fixed bugs in my codes' errors, I've learned the importance of attention to detail, as although the problem may be something big, more times than often will it be in the seemingly 'tiny' things, like syntax. I must say, if there are some things I'll always have even the faintest recollection of, they're data types, if-statements, and loops.
+        Now, as you go through my website you're more than welcome to explore and play around with my projects. Thank you for your time!</p>
+    </div>
+   <h2>Elisa's Project Gallery Station</h2>
+  <p>
+   <div class = "div-wrapper">
+     
+      <div class ="one">In a group of three, my group and I followed a tutorial on how to create a card game we found online. Using JavaScript, we went through trial and error in building our code and project's functionality. The user is meant to flip a card and match up the pairs based on memory of location (each card is placed in a different location at random at the start of the game). At any given time they can reset the game, but it's more fun to attempt to get all the way through!</div>
+      <div class ="two">
+        <img src="https://i.postimg.cc/LsMP1sJH/Screenshot-2025-05-28-10-30-58-PM.png" width="500" height="350">
+
+        <a href="memoryGame.html">Click to try the Card Memory Matching Game!</a>
+            
+     </a>
+  </div>
+  
+  
+      <div class ="three">Working in a group of three, my group and I developed a game intended for little kids to learn their ABC's. With the guidance of an adult, the questions prompted by the game will ask for kids to recall different letters of the alphabet or connect certain letters to similar concepts. We were able to come up with this game using the application of the fundamentals we used and learned through the memory game.</div>
+      <div class ="four">
+        <img src="https://i.postimg.cc/bYGVNDPW/Screenshot-2025-05-28-12-55-58-PM.png" width="500" height="350">
+
+   <a href="kid'sGame.html">Click to try the Kid's Alphabet Game!</a>
+  
+</div>
+      <div class ="five">This random quote generator is intended to provide the user with quotes at random, based on the category they choose: funny, motivational, or school. There's also a 'random' category that generates a quote from any of the three main categories. With a partner, I was able to use JavaScript to enhance a simple quote generator tutorial we found online.</div>
+      <div class ="six">
+         <img src="https://i.postimg.cc/63CKDHML/Screenshot-2025-05-28-10-13-51-PM.png" width="500" height="350">
+
+  <a href="quoteGenerator.html">Click here to try the Random Quote Generator!</a>
+  </a>
+</div>
+     
+      </div>
+  
+      
+      <div class="contact">
+  <h3>Contact Information</h3>
+      <p>Please feel free to contact Elisa directly through her email at: <a href=17326@husd.k12.ca.us>17326@husd.k12.ca.us</a></p>
+  </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 EMGM Webpage</p>
+    </footer>
+  </body>
+</html>

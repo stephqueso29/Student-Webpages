@@ -20,8 +20,8 @@ This portfolio site includes the following projects, each showcasing my growing 
 
 ## Links
 
-- GitHub Repository: [https://github.com/yor1an/Final-Project](https://github.com/yor1an/Final-Project)  
-- Live Site (GitHub Pages): [https://yor1an.github.io/Final-Project/](https://yor1an.github.io/Final-Project/)
+- [GitHub Repository](https://github.com/yor1an/Final-Project)
+- [Live Site](https://yor1an.github.io/Final-Project/)
 
 ---
 

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal WebPage</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #dce3e8);
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    /* Headings */
+    h1, h2 {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: white;
+      background-color: rgb(23, 131, 202);
+      padding: 1rem;
+      border-radius: 10px;
+      border: solid black 5px;
+      margin: 20px auto;
+      max-width: 60%;
+    }
+
+    /* Reusable box container */
+    .box {
+      background: white;
+      border: 3px solid rgb(23, 131, 202);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 70%;
+      margin: 20px auto;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Grid layout for games */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* Individual game card */
+    .game-box {
+      background: #fefefe;
+      border: 2px solid rgb(23, 131, 202);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Images inside game boxes */
+    .game-box img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .game-box img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Links styled like buttons */
+    a {
+      background-color: rgb(23, 131, 202);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: rgb(15, 90, 150);
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #222;
+      color: white;
+      margin-top: 20px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f4f4f4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgb(23, 131, 202);
+      border-radius: 5px;
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>  
+
+  <h1>Justin Agoncillo</h1>
+
+  <!-- About Myself Box -->
+  <div class="box">
+    <h2>About Myself</h2>
+    <p>I'm Justin A., a student at Mt Eden High School, about to finish my AP Comp Sci journey in junior year. I've gained experience in designing, developing, and enhancing websites with HTML, CSS, and JavaScript. I've also improved my problem-solving, debugging, and creative thinking abilities. This work showcases the skills I've built and the dedication I've brought to each project.</p>
+  </div>
+
+  <!-- My Games Section with CodePen Project -->
+  <div class="box">
+    <h2>My Games</h2>
+    <div class="grid-container">
+
+      <!-- Tic Tac Toe Game -->
+      <div class="game-box">
+        <img src="images/ticty.png" alt="Tic Tac Toe Preview">
+        <p>Classic two-player Tic Tac Toe game.</p>
+        <a href="project1.html" target="_blank">Play Tic Tac Toe</a>
+      </div>
+      
+      <!-- Minesweeper Game -->
+    <div class="game-box">
+  <img src="images/mineweep.png" alt="Minesweeper Preview">
+  <p>Challenge yourself to clear the board without hitting mines.</p>
+  <a href="project2.html" target="_blank">Play Minesweeper</a>
+</div>
+
+
+      <!-- CodePen Project -->
+      <div class="game-box">
+        <img src="images/cpsss.png" alt="CodePen Project Preview">
+        <p>Simple and fun CPS game.</p>
+        <a href="project3.html" target="_blank">Play CPS Game</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact Info Box -->
+  <div class="box">
+    <h2>Contact Info</h2>
+    <p>Feel free to contact me on <a href="https://github.com/Jusulol" target="_blank">GitHub</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Personal Page</p>
+  </footer>
+</body>
+</html>

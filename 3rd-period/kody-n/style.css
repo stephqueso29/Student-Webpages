@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+/* title */
+header {
+  background-color: black;
+  padding: 40px;
+  border-bottom: 3px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+/* title text */
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #1da7f6;
+  
+}
+
+nav {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+/* nav buttons */
+nav a {
+  color: #1da7f6;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  background: #AFDBC3; 
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* about me */
+#about-me {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+#about-me h2 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+#about-me p {
+  font-size: 1.15rem;
+  color: #555;
+  max-width: 700px;
+}
+
+/* projects */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* each project box */
+.project {
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* project title */
+.project h3 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 15px;
+  color: #222;
+}
+
+/* project button */
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2563eb; 
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+}
+
+.project-link:hover,
+.project-link:focus {
+  background: #1e40af;
+  outline: none;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* project yap */
+.project p {
+  font-size: 1rem;
+  color: #444;
+  flex-grow: 1;
+}
+
+/* contact */
+footer.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #222;
+  user-select: none;
+}

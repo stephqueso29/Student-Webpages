@@ -1,0 +1,168 @@
+<!--  project by Chloe & Shreya -->
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset= "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <title>Memory Game | Javascript</title> 
+    <link rel = "stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <div class="container">
+<!--       we just made the large container -->
+      <h2>Memory Game</h2>
+      <!--      this is making the heading of the screen -->
+      <div class="game"></div>
+      <button class="reset" onclick="window.location.reload();">Reset Game</button>
+<!--       this is to make the reset button at the bottom of the screen -->
+    </div>
+    <script>
+    const emojis = ["🐸","🐸","🙉","🙉","⭐","⭐","🦧","🦧","🐥","🐥","🍄","🍄","🐯","🐯","🍀","🍀"];
+      var shuf_emojis = emojis.sort(() => (Math.random() > .5) ? 2 : -1);
+    // randomly shuffling emojis in the array
+      for ( var i = 0; i<emojis.length; i++){ 
+        
+        let box = document.createElement('div')
+        box.className = 'item';
+        box.innerHTML = shuf_emojis[i]
+  //we are generating random emojis to store in the compartments
+
+        box.onclick = function(){
+          this.classList.add('boxOpen')
+          setTimeout(function(){
+            //if the box is pressed on, it will open
+           if(document.querySelectorAll('.boxOpen').length > 1){
+             if(document.querySelectorAll('.boxOpen')[0].innerHTML == document.querySelectorAll('.boxOpen')[1].innerHTML){
+               //here we are comparing if the two boxes we clicked had the same emojis
+                    document.querySelectorAll('.boxOpen')[0].classList.add('boxMatch')
+          //we are adding box match to the first open box because both the boxes we opened have matching emojis
+               document.querySelectorAll('.boxOpen')[1].classList.add('boxMatch')
+               //we are adding box match to the second open box
+               document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+               
+               document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
+              //for both of these, we are removing the box open because they have already been match and they should not flip around
+               if(document.querySelectorAll('.boxMatch').length == emojis.length){
+       alert('win')
+                }
+               //if all the emojis in the array have been matched then the website will indicade that we have won
+               
+             } else {
+               document.querySelectorAll('.boxOpen')[1].classList.remove('boxOpen')
+                document.querySelectorAll('.boxOpen')[0].classList.remove('boxOpen')
+           //otherwise, if the emojis in the boxes do not match, the boxes will end up turning back around or closing
+               
+             }
+             }
+          },500)
+        }
+        
+        document.querySelector('.game').appendChild(box);
+      }
+    </script>
+  </body>
+</html>
+<style>
+  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(173, 216, 230);
+}
+
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #2C7DA0;
+  padding: 40px 60px;
+}
+
+/* this part is deciding the layout of the bigger container, such as its position, how the words will be aligned in the center, the border gaps, its color, etc. */
+
+h2{
+  font-size: 3em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spcacing: 0.1em;
+}
+/* This is deciding the layout of the words "memory game"; it is deciding what size, color, letter type, and spacing it is */
+
+.reset{
+  padding: 15px 20px;
+  color: #267c65;
+  background: #ffffff;
+  border: none;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+}
+/*  this part is deciding that layout for the reset button, its centering, the letter color, size, its background color, etc.*/
+
+.reset:focus{
+  color: #fff;
+  background: #267c65;
+}
+/* this is saying that when the reset button is clicked, the colors of the words and background will switch */
+
+.game{
+  width: 430px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+/* this is determining the layout of the grid on the game board */
+
+.item{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  background: #fff;
+  transform: rotateY(180deg);
+  transition: 0.25s;
+   
+}
+/* this is determining the positioning of the emojis on their respective squares, the transition also means that it will take 0.25seconds for the box to turn around */
+
+.item.boxOpen{
+  transform: rotateY(0deg);
+}
+/* this means that the box will flip when declared boxOpen */
+
+.item::after{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;  
+}
+/* this is all the layout for when the boxes are flipped and do not show the emojis */
+
+.boxOpen:after,
+.boxMatch:after{
+  transform: rotateY(180deg);
+}
+</style>
+  

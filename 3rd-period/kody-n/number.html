@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="number.css">
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <p>Select your mode:</p>
+
+    <button onclick="startChoosingMode()">Choose the Secret Number</button> 
+    <button onclick="startRandomMode()">Let the Game Choose the Secret Number</button>
+    <div id="modeSelection" class="message"></div>
+    <div id="choosingMode" style="display:none;">
+        <input type="number" id="secretNumber" placeholder="Set the secret number (1-100)" min="1" max="100">
+        <button onclick="setSecretNumber()">Set Secret Number</button>
+    </div>
+    <div id="guessingMode" style="display:none;">
+        <input type="number" id="userGuess" placeholder="Enter a number" min="1" max="100">
+        <button onclick="checkGuess()">Submit Guess</button>
+    </div>
+    <div id="message" class="message"></div>
+    <div id="guessHistory" class="message"></div>
+
+    <script src="number.java"></script>
+</body>
+</html>

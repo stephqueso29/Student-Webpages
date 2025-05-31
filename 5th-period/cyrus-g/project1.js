@@ -1,28 +1,45 @@
-function play(userChoice) {
-  const choices = ['rock', 'paper', 'scissors'];
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
+let playerChoice = '';
+let compChoice = '';
 
-  let result = '';
+function playerSelect(choice) {
+  playerChoice = choice;
+  game();
+  if (['rock', 'paper', 'scissors'].includes(playerChoice)) {
+    compare();
+  }
+}
 
-  if (userChoice === computerChoice) {
-    result = "It's a tie!";
-  } else if (
-    (userChoice === 'rock' && computerChoice === 'cissors') ||
-    (userChoice === 'paper' && computerChoice === 'rock') ||
-    (userChoice === 'cissors' && computerChoice === 'paper')
+function game() {
+  const options = ['rock', 'paper', 'scissors'];
+  compChoice = options[Math.floor(Math.random() * 3)];
+}
+
+function compare() {
+  let resultText = `Computer chose ${compChoice}. `;
+
+  if (playerChoice === compChoice) {
+    resultText += "It's a tie!";
+  } 
+  else if (
+    (playerChoice === 'rock' && compChoice === 'scissors') ||
+    (playerChoice === 'paper' && compChoice === 'rock') ||
+    (playerChoice === 'scissors' && compChoice === 'paper')
   ) {
-    result = `You win! ${userChoice} beats ${computerChoice}.`;
-  } else {
-    result = `You lose! ${computerChoice} beats ${userChoice}.`;
+    resultText += "You win!";
+  } 
+  else {
+    resultText += "You lose!";
   }
 
-  document.getElementById('result').textContent = result;
-  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = true);
+  document.getElementById('result').textContent = resultText;
   document.getElementById('play-again').style.display = 'inline-block';
+  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = true);
 }
 
 function resetGame() {
+  playerChoice = '';
+  compChoice = '';
   document.getElementById('result').textContent = '';
-  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = false);
   document.getElementById('play-again').style.display = 'none';
+  document.querySelectorAll('.buttons button').forEach(btn => btn.disabled = false);
 }

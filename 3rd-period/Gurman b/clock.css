@@ -1,0 +1,24 @@
+  body {
+        font-family: 'Poppins', sans-serif; /* Sets font style */
+        background-color: #1a1a2e; /* Background color of the page */
+        color: #fff; /* Text color */
+        display: flex;
+        justify-content: center; /* Centers content horizontally */
+        align-items: center; /* Centers content vertically */
+        height: 100vh; /* Full height of the viewport */
+        margin: 0; /* Removes default margin */
+    }
+
+    .clock-container {
+        background: #0f3460; /* Background color of the clock container */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 10px; /* Box shadow for 3D effect */
+        text-align: center; /* Centers text */
+    }
+
+    #clock {
+        font-size: 50px; /* Sets clock text size */
+        font-weight: bold; /* Makes the text bold */
+        letter-spacing: 2px; /* Adds spacing between letters */
+        text-shadow: 0 0 10px; /* Adds a glow effect to the text */
