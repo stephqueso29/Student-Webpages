@@ -1,0 +1,171 @@
+<!-- David Ramos and Aaron Gabriel Dazo -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jomdeveloper">
+    <title>ANALOG CLOCK</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="vanilla-tilt.js"></script><!--This is something new I added that is the external library for the tilt effect-->
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Times New Roman";
+    }
+    /*This is the body styling, which centers the clock and sets the background color*/
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: lightblue;
+      transition: background 0.5s ease;/*This is something new I added that is a smooth transition for the background change*/
+    }
+    /*This is the clock container styling*/
+    .clock {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border: 15px solid red;/*This is the red border for the clock*/
+    }
+    /*This is the styling for the clock numbers*/
+    .number {
+      transform: rotate(calc(30deg * var(--n)));/*This helps to rotate the numbers based on their position*/
+      position: absolute;
+      text-align: center;
+      inset: 20px;
+      font-size: 45px;
+      text-shadow: 0 0 10px lightblue;/*This is the text shadow for a better visibility on the numbers*/
+    }
+    /*This helps to rotate the number text that is inside a <b> element*/
+    .number b {
+      transform: rotate(calc(-30deg * var(--n))); 
+      display: inline-block;
+    }
+    /*This is the styling for the center dot*/
+    .center-dot {
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      background-color: red;
+      border-radius: 50%;/*This helps make it into a circle*/
+    }
+    /*This is the styling for the clocks hands*/
+    .hour-hand, .minute-hand, .second-hand {
+      --rotate: 0;/*This is the default rotation angle*/
+      position: absolute;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));/*This helps to rotate the clocks hands*/
+      transform-origin: bottom;/*This helps to rotate from the bottom center*/
+    }
+    /*This is the styling for the hour hand*/
+    .hour-hand {
+      width: 15px;
+      height: 125px;
+      background-color: black;
+    }
+    /*THis is the styling for the minute hand*/
+    .minute-hand {
+      width: 14px;
+      height: 185px;
+      background-color: gray;
+    }
+    /*This is the styling for the second hand*/
+    .second-hand {
+      width: 7px;
+      height: 185px;
+      background-color: red;
+    }
+    /*This is something new I added which is the button to toggle the background colors*/
+    .bg-toggle-button {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: limegreen;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    /*THis is something new I added which is the button hover effect*/
+    .bg-toggle-button:hover {
+      background-color: limegreen;
+    }
+  </style>
+  <body>
+    <!--This is the clock container that has the numbers and clocks hands-->
+    <div class="clock">
+      <div class="number" style="--n:1"><b>1</b></div>
+      <div class="number" style="--n:2"><b>2</b></div>
+      <div class="number" style="--n:3"><b>3</b></div>
+      <div class="number" style="--n:4"><b>4</b></div>
+      <div class="number" style="--n:5"><b>5</b></div>
+      <div class="number" style="--n:6"><b>6</b></div>
+      <div class="number" style="--n:7"><b>7</b></div>
+      <div class="number" style="--n:8"><b>8</b></div>
+      <div class="number" style="--n:9"><b>9</b></div>
+      <div class="number" style="--n:10"><b>10</b></div>
+      <div class="number" style="--n:11"><b>11</b></div>
+      <div class="number" style="--n:12"><b>12</b></div>
+      <!--This is the clocks hands-->
+      <div class="hour-hand" id="hour-hand"></div>
+      <div class="minute-hand" id="minute-hand"></div>
+      <div class="second-hand" id="second-hand"></div>
+      <div class="center-dot" id="center-hand"></div>
+    </div>
+    <!--This is something new I added which is the button to toggle the background colors-->
+    <button class="bg-toggle-button" onclick="toggleBackgroundColor()">Change Background</button>
+    <script>
+      //This is something new I added which is the arrays of colors to be able to toggle in between
+      const colors = ['lightblue', 'lightcoral', 'lightsalmon', 'lightyellow'];
+      let currentColorIndex = 0;
+      //This s something new I added which is the function to be able to toggle the background colors
+      function toggleBackgroundColor() {
+        currentColorIndex = (currentColorIndex + 1) % colors.length; //This is something new I added which helps cycle through colors
+        document.body.style.background = colors[currentColorIndex];
+      }
+      //THis helps to access the clock hands by their ID's
+      const secondHand = document.getElementById('second-hand');
+      const minuteHand = document.getElementById('minute-hand');
+      const hourHand = document.getElementById('hour-hand');
+      //This function helps to update the clocks hands every second
+      function clockTick() {
+        const date = new Date();
+        const seconds = date.getSeconds() / 60;//This helps to normalize the seconds between 0 and 1
+        const minutes = (seconds + date.getMinutes()) / 60;//This helps to normalize the minutes between 0 and 1
+        const hours = (minutes + date.getHours()) / 12;//This helps to normalize the hours between 0 and 1
+        //This helps to rotate the clocks hands based on the times values
+        rotateClockHand(secondHand, seconds);
+        rotateClockHand(minuteHand, minutes);
+        rotateClockHand(hourHand, hours);
+      }
+      //This function helps to rotate the clocks hands by the given rotation value
+      function rotateClockHand(element, rotation) {
+        element.style.setProperty('--rotate', rotation * 360);//This helps to apply the rotation in the degrees
+      }
+      //This helps to update the clocks every seconds
+      setInterval(clockTick, 1000);
+      //This helps to initialize the tilt effect on the clocks by using the VanillaTilt.js
+      VanillaTilt.init(document.querySelector(".clock"), {
+        max: 25,//This is the maximum tilt angle
+        speed: 400,//This is the speed of the tilt effect
+      });
+    </script>
+  </body>
+</html>
+<!--So, basically what I added new in this clock code was a background color changer to make it look cool and interesting.-->

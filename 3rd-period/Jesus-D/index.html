@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jesus's Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('about')">About Me</button>
+      <button onclick="showPage('projects')">Projects</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <div class="home-container">
+        <h1>What's up! I'm Jesus Delgado<br><span class="nickname">AKA Chakaboycuy</span></h1>
+        <p>Say whats up to my portfolio 👋</p>
+
+        <div class="gallery">
+          <img src="https://mail.google.com/mail/u/0?ui=2&ik=9f6a67df5b&attid=0.3&permmsgid=msg-a:r8526084030994366264&th=197193c6e778c3b3&view=att&disp=safe&realattid=197193c4ee7589626f71&zw" alt="Photo 1">
+          <img src="https://mail.google.com/mail/u/0?ui=2&ik=9f6a67df5b&attid=0.2&permmsgid=msg-a:r8526084030994366264&th=197193c6e778c3b3&view=att&disp=safe&realattid=197193c4f1876b6eee82&zw" alt="Photo 2">
+          <img src="https://mail.google.com/mail/u/0?ui=2&ik=9f6a67df5b&attid=0.1&permmsgid=msg-a:r8526084030994366264&th=197193c6e778c3b3&view=att&disp=safe&realattid=197193c4f43a2ee868f3&zw" alt="Photo 3">
+        </div>
+
+        <button onclick="showPage('about')">Learn More About Me</button>
+      </div>
+    </section>
+
+    <!-- About Me Page -->
+    <section id="about" class="page">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <textarea readonly>
+Hey my name is Jesus Delgado and I am a Junior in Mount.Eden High School. I am a Hayward native as I am born and raised. I have three older sisters and two doggies. My best friend's name is Horacio Ayala and he is also my cousin. I am very passionate about soccer even though I don't play as much as I used to. I'm obsessed with Hot Wheels and I have a collection of over 500, worth over $1,000. This year I really tried my best to have above average grades and make as much monayyyy as possible. Shout out to JACK IN THE BOX! I also cut a little bit of hair on the side for some extra money. My favorite show is that 70's show easily. Oh and Hala MADRDID!
+        </textarea>
+      </div>
+    </section>
+
+    <!-- Projects Page -->
+    <section id="projects" class="page">
+      <h2>My Projects</h2>
+      <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqF2SnJK6y_zpTEfURslSm_s2Qp4gLPZZ_8A&amp;s" alt="Dino Game Screenshot" />
+          <div class="project-info">
+            <h3>DinoGame (Project One)</h3>
+            <p>This was my first project in which I worked with Ainoa Hinostroza. We made a dino game but instead of a dino we used a box.</p>
+            <a href="DinoGame.html" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <img src="https://th.bing.com/th/id/OIP.uqVQj9IYz7ggJC0c27DZagAAAA?rs=1&pid=ImgDetMain" alt="Memory Game" />
+          <div class="project-info">
+            <h3>MemoryGame</h3>
+            <p>This is a simple memory card game I built with Guadalupe Zapata. You have to mix and match cards based on memory.</p>
+            <a href="MemoryGame.html" target="_blank">View Project</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <img src="https://shots.codepen.io/username/pen/EmOwgz-800.jpg?version=1496096981" alt="Quote Generator" />
+          <div class="project-info">
+            <h3>QuoteGenerator</h3>
+            <p>A quote generator based on your feelings, made with Carlos Baltazar and Guadalupe Zapata to help people cheer up.</p>
+            <a href="QuoteGenerator.html" target="_blank">View Project</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
