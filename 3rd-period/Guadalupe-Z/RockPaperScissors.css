@@ -1,0 +1,86 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh; /* Makes the game centered on the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: pink; /* Green background */
+}
+
+.container {
+    padding: 2rem 4rem;
+    border-radius: 14px; /* Rounded corners */
+    background: white; /* Light green background */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+}
+
+.result_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5rem; /* Space between user and CPU images */
+}
+
+.result_images img {
+    width: 100px; /* Set image size */
+}
+
+.user_result img {
+    transform: rotate(90deg); /* Rotate user image to face CPU */
+}
+
+.cpu_result img {
+    transform: rotate(-90deg) rotateY(180deg); /* Rotate CPU image to face user */
+}
+
+.result {
+    text-align: center;
+    font-size: 2rem;
+    color: #000000 ;
+    margin-top: 1.5rem;
+}
+
+.option_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    gap: 4rem; /* Space between choices */
+}
+
+.option_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5; /* Make images slightly faded */
+    cursor: pointer; /* Show hand cursor on hover */
+    transition: opacity 0.3s ease;
+}
+
+.option_image:hover,
+.option_image.active {
+    opacity: 1; /* Highlight selected image */
+}
+
+.option_image img {
+    width: 80px;
+    pointer-events: none; /* Prevent clicking on image itself */
+}
+
+.option_image p {
+    color: #000000 ;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    pointer-events: none; /* Prevent text selection */
+}
+

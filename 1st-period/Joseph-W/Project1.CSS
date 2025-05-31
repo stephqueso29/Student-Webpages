@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Game container */
+#game{
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+    margin: auto;
+    overflow: hidden;
+  /*defines the playable area */
+}
+/*moving obstacle (block)*/
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    left: 400px;
+    animation: block 2s infinite linear;
+  /*moves from right to left repeatedly */
+}
+/*hole inside the obstacle where the character can pass */
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top:-500px;
+    animation: block 2s infinite linear;
+}
+/*animation for obstacles moving left */
+@keyframes block{
+    0%{left: 400px;}
+    100%{left: -50px;}
+}
+/* the character (flappy ball) */
+#character{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 200px;
+  /* character starts in the middle */
+}
+

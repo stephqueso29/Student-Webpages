@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>High Striker Game</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="HighStriker.css">
+</head>
+<body>
+
+    <!-- Main game container -->
+    <div class="container">
+        <h1>High Striker Game</h1>
+        <p>Start the swing, then stop at the right moment to get max power!</p>
+
+        <!-- Buttons to start and stop the power bar -->
+        <button onclick="startPower()">Start Swing</button>
+        <button onclick="stopPower()">Stop!</button>
+
+        <!-- Power meter bar -->
+        <div id="powerMeter">
+            <div id="powerBar"></div>
+        </div>
+
+        <!-- Game area for the puck to move -->
+        <div id="gameArea">
+            <div id="puck"></div>
+        </div>
+
+        <!-- Strength and result text -->
+        <p id="strength"></p>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="HighStriker.js"></script>
+</body>
+</html>

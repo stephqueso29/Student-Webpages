@@ -1,0 +1,49 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("https://st2.depositphotos.com/1757635/5948/i/450/depositphotos_59482257-stock-photo-woman-on-beautiful-sunset.jpg"); 
+    background-size: cover;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+/* Styling for the title */
+h1 {
+    color: #03071e; 
+}
+
+/* Style for the category labels (e.g., Motivational, Silly) */
+.message-el {
+    font-family: Georgia, serif; 
+    font-size: 20px;
+    font-weight: bold; 
+    margin-top: 20px;
+}
+
+/* Style for where the quotes will appear */
+.quotes-el {
+    font-size: 18px;
+    font-style: italic;
+    min-height: 30px; /* Ensures space is reserved for the text */
+    margin-bottom: 10px;
+}
+
+/* Styling for the buttons */
+button {
+    color: #03071e;
+    width: 150px;
+    background: #6d597a; 
+    padding: 10px;
+    font-weight: bold; 
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer; /* Changes the cursor when hovering */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect - changes color and slightly enlarges */
+button:hover {
+    background: pink;
+    transform: scale(1.05);
+}

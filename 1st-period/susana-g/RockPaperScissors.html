@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="RockPaperScissors.css"> <!-- Connects to the CSS file -->
+</head>
+<body>
+    <section class="container"> <!-- Main game area -->
+        
+        <div class="result_field"> <!-- Displays results -->
+            <div class="result_images"> <!-- Shows both player's choices -->
+                <span class="user_result">
+                    <img src="https://th.bing.com/th/id/OIP.JFizroQ6bKD-wSqKD3S9zgAAAA?pid=ImgDet&w=189&h=152&c=7" alt="User Choice">
+                </span>
+                <span class="cpu_result">
+                    <img src="https://th.bing.com/th/id/OIP.xzrDdd5BUefXARy887sh9wAAAA?pid=ImgDet&w=189&h=152&c=7" alt="CPU Choice">
+                </span>
+            </div>
+            <div class="result">Let's Play!!</div> <!-- Game outcome message -->
+        </div>
+        
+        <div class="option_images"> <!-- Rock, Paper, Scissors selection -->
+            <span class="option_image" data-choice="rock">
+                <img src="https://th.bing.com/th/id/OIP.ZTp2rKXDNy2PPoYdFzfbsAAAAA?pid=ImgDet&w=189&h=162&c=7" alt="Rock">
+                <p>Rock</p>
+            </span>
+            <span class="option_image" data-choice="paper">
+                <img src="https://th.bing.com/th/id/OIP.Jco7vN336J-AimjOc_Gl3wAAAA?pid=ImgDet&w=189&h=189&c=7" alt="Paper">
+                <p>Paper</p>
+            </span>
+            <span class="option_image" data-choice="scissors">
+                <img src="https://missopi.github.io/rock-paper-scissors/images/scissors.png" alt="Scissors">
+                <p>Scissors</p>
+            </span>
+        </div>
+    </section>
+
+    <script src="script.js" defer></script>
+    <script src="RockPaperScissors.js"></script>
+  <!-- Connects to the JavaScript file -->
+</body>
+</html>

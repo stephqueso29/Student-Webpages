@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="startScreen" class="quiz-container">
+  <h1>General Knowledge Quiz</h1>
+  <button onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<div id="quizForm" class="quiz-container" style="display: none;">
+  <form name="quizForm">
+    <!-- 10 Questions -->
+    <div id="q1" class="question" style="display: none;">
+      <p>1. What is the capital of France?</p>
+      <input type="radio" name="q1" value="a"> Berlin<br>
+      <input type="radio" name="q1" value="b"> Paris<br>
+      <input type="radio" name="q1" value="c"> Madrid<br>
+      <button type="button" onclick="nextQuestion(1)">Next</button>
+    </div>
+
+    <div id="q2" class="question" style="display: none;">
+      <p>2. What is 5 × 6?</p>
+      <input type="radio" name="q2" value="a"> 30<br>
+      <input type="radio" name="q2" value="b"> 20<br>
+      <input type="radio" name="q2" value="c"> 25<br>
+      <button type="button" onclick="nextQuestion(2)">Next</button>
+    </div>
+
+    <div id="q3" class="question" style="display: none;">
+      <p>3. Who wrote 'Romeo and Juliet'?</p>
+      <input type="radio" name="q3" value="a"> Charles Dickens<br>
+      <input type="radio" name="q3" value="b"> William Shakespeare<br>
+      <input type="radio" name="q3" value="c"> Mark Twain<br>
+      <button type="button" onclick="nextQuestion(3)">Next</button>
+    </div>
+
+    <div id="q4" class="question" style="display: none;">
+      <p>4. What color do you get when you mix red and white?</p>
+      <input type="text" name="q4Input" placeholder="Type your answer">
+      <button type="button" onclick="nextQuestion(4)">Next</button>
+    </div>
+
+    <div id="q5" class="question" style="display: none;">
+      <p>5. Which planet is known as the Red Planet?</p>
+      <input type="radio" name="q5" value="a"> Venus<br>
+      <input type="radio" name="q5" value="b"> Mars<br>
+      <input type="radio" name="q5" value="c"> Jupiter<br>
+      <button type="button" onclick="nextQuestion(5)">Next</button>
+    </div>
+
+    <div id="q6" class="question" style="display: none;">
+      <p>6. How many sides does a triangle have?</p>
+      <input type="text" name="q6Input" placeholder="Type your answer">
+      <button type="button" onclick="nextQuestion(6)">Next</button>
+    </div>
+
+    <div id="q7" class="question" style="display: none;">
+      <p>7. What gas do plants absorb from the atmosphere?</p>
+      <input type="radio" name="q7" value="a"> Oxygen<br>
+      <input type="radio" name="q7" value="b"> Carbon Dioxide<br>
+      <input type="radio" name="q7" value="c"> Nitrogen<br>
+      <button type="button" onclick="nextQuestion(7)">Next</button>
+    </div>
+
+    <div id="q8" class="question" style="display: none;">
+      <p>8. Name the largest mammal on Earth.</p>
+      <input type="text" name="q8Input" placeholder="Type your answer">
+      <button type="button" onclick="nextQuestion(8)">Next</button>
+    </div>
+
+    <div id="q9" class="question" style="display: none;">
+      <p>9. How many continents are there?</p>
+      <input type="radio" name="q9" value="a"> 5<br>
+      <input type="radio" name="q9" value="b"> 6<br>
+      <input type="radio" name="q9" value="c"> 7<br>
+      <button type="button" onclick="nextQuestion(9)">Next</button>
+    </div>
+
+    <div id="q10" class="question" style="display: none;">
+      <p>10. Who painted the Mona Lisa?</p>
+      <input type="radio" name="q10" value="a"> Vincent van Gogh<br>
+      <input type="radio" name="q10" value="b"> Pablo Picasso<br>
+      <input type="radio" name="q10" value="c"> Leonardo da Vinci<br>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div id="result" class="result"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

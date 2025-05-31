@@ -1,0 +1,69 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdf2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border: 2px solid #ff66b2;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff66b2;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.question {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ff66b2;
+    font-family: 'Poppins', sans-serif;
+}
+
+#startScreen button {
+    background-color: #ff66b2;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+#startScreen button:hover {
+    background-color: #ff3385;
+}

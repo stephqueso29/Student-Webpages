@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #7ee8fa;
+}
+header p {
+  font-size: 1.2rem;
+  color: #c3f0ff;
+}
+
+/* About section */
+.about {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: #e0f7fa;
+}
+
+/* Projects section */
+.projects {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2rem;
+  color: #00e5ff;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  color: #d0faff;
+}
+
+.project h3 {
+  color: #69f0ae;
+  }
+
+.project a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.project a:hover {
+  color: #1de9b6;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Center KFC project */
+.project.center {
+  grid-column: 1 / -1;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.3);
+   border: 2px solid #7ee8fa;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #1a2a33;
+  color: #a0dfff;
+  margin-top: 3rem;
+}
+
+

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; 
+}
+
+/* Style the body to cover the full screen */
+body {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center context horizontally */
+  align-items: center; 
+  flex-direction: column; /* Stack elements vertically */
+  background: linear-gradient(145deg, #432371, #f5a36c); /* Gradient background */
+  /* color: fff; */
+}
+
+/* Style the heading */
+h1 {
+  font-size: 48px;
+  margin-bottom: 40px; /* Space below the heading */
+  letter-spacing: 1.5px; /* Add spacing between letters */
+}
+
+/* Countdown container */
+.countdown {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4); 
+  padding: 40px 30px; /* Padding around the countdown */
+  border-radius: 20px; /* Rounded corners */
+  backdrop-filter: blur(20px); /* Blur effect for a the glassy poochina look */
+}
+
+/* Style each timer block (days, hours, mins, secs) */
+.timer {
+  background-color: rgba(255, 255, 255, 0.15); 
+  padding: 30px; /* Space inside the timer box */
+  margin: 0 20px; /* Space between timers */
+  border-radius: 20px; /* Rounded corners of the frame aka border */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; /* Center context */
+  align-items: center; /* Align context */
+  width: 100%;
+  min-width: 100px; /* Minimum size for design */
+  max-width: 160px; /* max maximum width */
+  height: 100%;
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Styles the countdown numbers */
+.timer .time {
+  font-size: 48px; 
+  font-weight: 700; /* Bold text */
+}
+
+/*Style the labels (Days, Hours, Mins, Secs)*/
+.timer .label {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase; /* Makes text uppercase */
+  letter-spacing: 2px; /* Add spaces between letters */
+  text-shadow: 1px 1px #fff; /* Light shadow effect */
+}
+
+/* Add hover effect to the timer blocks/frame */
+.timer:hover {
+  background-color: rgba(255, 255, 255, 0.25); /* Lighten the background color on hover */
+}
+
+
+@media screen and (max-width: 1024px) {
+  /* Make heading smaller on smaller screens */
+  h1 {
+    font-size: 38px;
+  }
+  
+  /* Allows timers to wrap to the next line */
+  .countdown {
+    flex-wrap: wrap;
+  }
+  
+  /* Adjust size for timers*/
+  .timer {
+    max-height: 150px; /* max height */
+    margin: 20px; /* Add spacing */
+  }
+}

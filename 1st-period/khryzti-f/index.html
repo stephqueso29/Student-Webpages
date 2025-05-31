@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>khryzti's portfolio</title>
+  <style>
+    body {
+      font-family: Garamond, sans-serif;
+      background-color: #f8f0ff;
+      color: #5c3d8c;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #a678d5;
+    }
+    .about {
+      max-width: 600px;
+      text-align: center;
+      margin: 1rem;
+      font-size: 1.2rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      width: 90%;
+      max-width: 1200px;
+    }
+    .project-card {
+      background-color: #fff0f9;
+      border: 2px solid #d5a6ff;
+      border-radius: 15px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .project-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+      color: #a678d5;
+    }
+    .project-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .project-card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #c9a0dc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .project-card a:hover {
+      background-color: #b388eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>khryzti's projects ^0^</h1>
+  </header>
+
+  <section class="about">
+    <p>hello!! my name is khryzti, and I started coding this school year. I've always been interested in math/stem so I thought this class computer science would be fun!!!</p>
+    <p>over this school year I have learned about the basics and principles of coding from variables to functions, and how the internet works (ip addresses domains routers etc), along with learning the basics of coding. I also learned many languages such as C++, HTML, CSS,  Javascript, and Scratch. using these languages, guidance from the class,  and my knowledge on coding i created these projects throughout the school year ^_^</p>
+  </section>
+
+  <section class="projects">
+    <div class="project-card">
+      <img src="images/password-generator.png" alt="password generator">
+      <h3>password generator</h3>
+      <p>makes random strong passwords</p>
+      <a href="https://krispp-y.github.io/passgen/" target="_blank">view project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/blackjack.png" alt="blackjack game">
+      <h3>blackjack</h3>
+      <p>play cards against the computer</p>
+      <a href="https://krispp-y.github.io/blackjack/" target="_blank">view project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/pingpong.png" alt="ping pong game">
+      <h3>ping pong</h3>
+      <p>hit the ping pong ball</p>
+      <a href="https://krispp-y.github.io/piungpong/" target="_blank">view project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/rock-paper-scissors.png" alt="rock paper scissors">
+      <h3>rock paper scissors</h3>
+      <p>get lucky against the computer</p>
+      <a href="https://krispp-y.github.io/jaankenpoo/" target="_blank">view project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/whack-a-virus.png" alt="whack a virus game">
+      <h3>whack a virus</h3>
+      <p>click viruses before your computer explodes!</p>
+      <a href="https://krispp-y.github.io/whackavirus/" target="_blank">view project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="images/guess-the.png" alt="guess the game">
+      <h3>guess the ___</h3>
+      <p>guess the right answer in scratch</p>
+      <a href="https://scratch.mit.edu/projects/1163222442" target="_blank">view project</a>
+    </div>
+  </section>
+</body>
+</html>
