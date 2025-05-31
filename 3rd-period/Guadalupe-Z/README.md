@@ -21,27 +21,27 @@ Here are the projects included in my portfolio:
 
 1. **Rock Paper Scissors Game**  
    A fun, interactive JavaScript game where players compete against the computer.  
-   [View Project](https://codepen.io/lupezapata08/pen/RNPNmxO)
+  
 
 2. **Fruit Memory Game**  
    A matching card game using JavaScript and fruit-themed graphics. Great for practicing memory skills!  
-   [View Project](https://codepen.io/lupezapata08/pen/xbGbNya)
+  
 
 3. **Motivational Quotes Generator**  
    A simple project that displays inspiring quotes at random, built using JavaScript.  
-   [View Project](https://codepen.io/lupezapata930/pen/zxYLJWN)
+   
 
 4. **Burger Delish Menu**  
    A creative food menu website showing skills in layout and visual design.  
-   [View Project](https://codepen.io/lupezapata930/pen/YPPXqGZ)
+   
 
-5. **Weather Dashboard**  
-   A weather tracking app that lets users see forecasts in real time.  
-   [View Project](https://codepen.io/lupezapata08/pen/YOUR_PROJECT_5)
+5. **Password Generator**  
+   Allows for you to generate different types of passwords for the user.
+   
 
-6. **To-Do List App**  
-   A productivity tool for managing daily tasks and goals.  
-   [View Project](https://codepen.io/lupezapata08/pen/YOUR_PROJECT_6)
+6. **Black Jack Game**  
+   A fun game created to play rounds of card until there is a winner or a tie. 
+
 
 ## 🔗 Links
 
