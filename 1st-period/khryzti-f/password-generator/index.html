@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet"> <!-- Poppins font -->
+        <title>Secure Password Generator</title>
+        <style>
+            body {
+                margin: 0px;
+                height: 100vh;
+                background-color: #5A2D81; /* Purple background */
+                color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "Poppins", sans-serif; /* Changed to Poppins font */
+            }
+
+            #title {
+                font-family: "Poppins", sans-serif; /* Changed to Poppins */
+                font-weight: 800;
+                margin-bottom: 10px;
+                line-height: 33px;
+            }
+
+            #green-text {
+                display: block;
+                color: #10B981;
+                margin: 0px;
+            }
+
+            #description {
+                margin-top: 0px;
+                margin-bottom: 35px;
+                color: #D5D4D8;
+            }
+
+            .containers {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 100px;
+            }
+
+            #container1, #container2 {
+                background-color: #3B1E64; /* Dark purple */
+                padding: 100px 50px;
+                width: 350px;
+                margin: 20px;
+                border-radius: 15px; /* Rounded corners for containers */
+            }
+
+            #btn1, #btn2 {
+                background-color: #1E90FF; /* Blue button */
+                color: #ffffff;
+                width: 145px;
+                margin-bottom: 10px;
+                padding: 7px 7px;
+                border: none;
+                border-radius: 10px; /* Rounded corners for buttons */
+                font-family: "Poppins", sans-serif; /* Poppins font for buttons */
+            }
+
+            #text-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .passwords-container {
+                margin: 16px auto;
+                text-align: center;
+                width: 100%;
+            }
+
+            .passwords {
+                margin: 5px;
+                width: 162px;
+                display: inline-block;
+                border-radius: 10px; /* Rounded corners for password blocks */
+                padding: 5px 0px;
+                background-color: #4E2483; /* Purple */
+                color: #1E90FF; /* Blue text */
+                font-weight: 500;
+                height: 20px;
+            }
+
+            hr {
+                color: #5A2D81; /* Purple */
+                border: none;
+                border-top: 2px solid #5A2D81; /* Adjusted hr to look more like a line */
+                margin: 20px 0;
+            }
+
+            #password1, #password3 {
+                margin: 0px 10px 0px 0px;
+            }
+
+            #password2, #password4 {
+                margin: 0px 0px 0px 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containers">
+            <div id="container1">
+
+                <div id="text-container">
+                    <h1 id="title">Random Password Generator!!</h1> <!-- Updated title -->
+                    <p id="description">Keep your personal info, accounts, and privacy safe.</p> <!-- Updated description -->
+                    <button id="btn1">Generate Password</button>
+                </div>
+                <hr>
+
+                <div class="passwords-container">
+                    <span class="passwords" id="password1"></span>
+                    <span class="passwords" id="password2"></span>
+                </div>
+
+            </div>
+
+            <div id="container2">
+
+                <div id="text-container">
+                    <h1 id="title">Random Password Generator!!</h1> <!-- Updated title -->
+                    <p id="description">Keep your personal info, accounts, privacy safe.</p> <!-- Updated description -->
+                    <button id="btn2">Generate Password</button>
+                </div>
+                <hr>
+
+                <div class="passwords-container">
+                    <span class="passwords" id="password3"></span>
+                    <span class="passwords" id="password4"></span>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+
+            // Function to generate random password
+            function generatePassword() {
+                let pw = "";
+                for (let i = 0; i < 14; i++) {
+                    let randomNumber = Math.floor(Math.random() * characters.length);
+                    pw += characters[randomNumber];
+                }
+                return pw;
+            }
+
+            // Get elements
+            const password1El = document.getElementById("password1");
+            const password2El = document.getElementById("password2");
+            const password3El = document.getElementById("password3");
+            const password4El = document.getElementById("password4");
+
+            // Generate initial password
+            password1El.textContent = generatePassword();
+            password3El.textContent = generatePassword();
+
+            // Add event listener to button 1
+            document.getElementById("btn1").addEventListener("click", () => {
+                password1El.textContent = generatePassword();
+                password2El.textContent = generatePassword();
+            });
+
+            // Add event listener to button 2
+            document.getElementById("btn2").addEventListener("click", () => {
+                password3El.textContent = generatePassword();
+                password4El.textContent = generatePassword();
+            });
+        </script>
+    </body>
+</html>
