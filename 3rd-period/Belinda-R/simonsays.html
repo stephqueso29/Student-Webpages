@@ -1,0 +1,45 @@
+<!-- belinda rivera molina 3rd period -->
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Says</title>
+  <link rel="stylesheet" href="simonsays.css">
+</head>
+
+<body>
+<!--   included container that wraps around the game -->
+  <div class="container">
+    <h1>Simon Says</h1>
+<!--     included game board to hold all the colors -->
+    <div class="game-board">
+      <div class="color-button" id="red" data-color="red"></div>
+      <div class="color-button" id="green" data-color="green"></div>
+      <div class="color-button" id="blue" data-color="blue"></div>
+      <div class="color-button" id="yellow" data-color="yellow"></div>
+      <div class="color-button" id="purple" data-color="purple"></div>
+      <div class="color-button" id="orange" data-color="orange"></div>
+<!--       all colors that are shown in the game -->
+    </div>
+<!--     that displays level, score and other buttons -->
+    <div class="controls">
+      <p id="level">Level: 1</p>
+      <p id="score">Score: 0</p>
+      <button id="start-button">Start</button>
+    </div>
+<!--     a way to show the player that they are moving up levels -->
+    <div class="modal" id="level-up-modal">
+      <div class="modal-content">
+        <h2>Level Up!</h2>
+        <p id="level-up-message"></p>
+        <button id="next-level-button">Continue</button>
+      </div>
+    </div>
+  </div>
+  <script src="simonsays.js"></script>
+</body>
+
+</html>
+
