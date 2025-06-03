@@ -85,7 +85,12 @@ footer {
 .image {
     width: 100%;
     max-width: 325px;
-    height: auto;
+    height: 300px;
     margin-top: 12px;
     border-radius: 8px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
 }
