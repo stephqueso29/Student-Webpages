@@ -30,10 +30,10 @@ My portfolio site presents my top projects in a clean, organized layout. It high
 📎 Useful Links
 
 - **GitHub Repository:**  
-  [https://github.com/yourusername/final-project-portfolio](https://github.com/yourusername/final-project-portfolio)
+  [https://github.com/yourusername/final-project-portfolio](https://github.com/Kobe9824/Final-Project-1)
 
 - **Live Site (GitHub Pages):**  
-  [https://yourusername.github.io/final-project-portfolio/](https://yourusername.github.io/final-project-portfolio/)
+  [https://yourusername.github.io/final-project-portfolio/](https://kobe9824.github.io/Final-Project-1/)
 
 
 Thanks for visiting my portfolio!
