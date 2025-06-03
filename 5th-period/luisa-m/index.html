@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Personal Portfolio</title>
+<style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #cad2c5, #84a98c);
+  color: #2f3e46;
+  line-height: 1.6;
+}
+
+h1, h3 {
+  color: #2f3e46;
+}
+
+a {
+  color: #52796f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #354f52;
+}
+
+header {
+  background: #354f52;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 4px solid #84a98c;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  background: #cad2c5;
+}
+
+.project h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #354f52;
+}
+
+.project p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #354f52;
+  color: white;
+  margin-top: 3rem;
+  border-top: 4px solid #52796f;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 1rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.about-container h1 {
+  margin-top: 0;
+  color: #52796f;
+}
+
+.projects-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+}
+
+.projects-heading {
+  font-size: 2rem;
+  color: #52796f;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-top: 1rem;
+}
+  #footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.email-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.email-tooltip img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.email-tooltip:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #2f3e46;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 0%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.email-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+#footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.icon-tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.icon-tooltip img {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+  transition: transform 0.2s ease;
+}
+
+.icon-tooltip:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: #2f3e46;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.icon-tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+</head>
+<body>
+  <header>
+  <h1>Personal Portfolio</h1>
+    <p>AP COMPUTER SCIENCE PRINCIPLES</p>
+</header>
+
+<section class="about-container">
+  <h1>About Me</h1>
+
+  <p>Hi, my name is Luisa Miller. I am just finishing my high school education and I am a beginner programmer. This past school year, I had the opportunity to take a Computer Science Principles class and it was a good learning experience.
+
+Throughout the course, I followed tutorials and classroom lessons to build small programs, and I gradually started to understand how code works and what it can create. I also faced many challenges in grasping new coding concepts, but I learned to stay curious and keep experimenting. One of the highlights of my learning experience was working with CodePen, where I enjoyed seeing the visual results of my code and exploring creative design using CSS. From customizing colors and fonts to experimenting with layouts and interactivity, I discovered that I enjoy the visual design aspect of web development. Overall, I am happy that I got to experience this side of science in computer programming and probably look forward to learning more on my own time.</p>
+</section>
+
+<section class="projects-section">
+  <h1 class="projects-heading">Projects</h1>
+  <div class="projects">
+    <div class="project">
+        <h3>To-Do List</h3>
+        <p>This website can help you remember to complete important tasks, making your day to day life organized and easier. Simply add as many tasks as needed to your list and when you're done, check it off by clicking the circle,  indicating that you’ve completed that task. </p>
+        <a href="toDoList.html">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Real Time Digital Clock & Weather App</h3>
+        <p>This real time website can be set as an aesthetic background with a calming background displayed. This website is also useful to search for a current weather forecast in any city in the world.</p>
+        <a href="clock.html">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Drum Kit & Tambourine Sound Board</h3>
+        <p>This sound board is helpful as you can listen and experience the different sounds of these two instruments. You can either click the buttons or use your keyboard to play the sounds. </p>
+        <a href="soundBoard.html">View Project</a>
+      </div>
+      <div class="project">
+        <h3>Journal Entry</h3>
+        <p>This website is useful to anyone who needs a place to write down any thoughts, notes, or just random things and want to save it in a safe place. It’s great for any use for work, school, or personal. You’re able to save as many entries as you want, and if needed, you can also delete it permanently. </p>
+        <a href="journalEntry.html">View Project</a>
+      </div>
+</div>
+</section>
+
+
+  <footer id="footer">
+
+  <div class="email-tooltip">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" />
+    <span class="tooltip-text">luisatupou07@gmail.com</span>
+  </div>
+     <div class="icon-tooltip">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub Icon" />
+      <span class="tooltip-text">github.com/@luisa-miller</span>
+    </div>
+
+    <div class="icon-tooltip">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111501.png" alt="CodePen Icon" />
+      <span class="tooltip-text">codepen.io/@Luisa-Tupou</span>
+    </div>
+  </div>
+  <p>&copy; 2025 Luisa Miller. All rights reserved.</p>
+</footer>
+
+ 
+<script src="index.js"> </script>
+</body>
+</html>

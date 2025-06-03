@@ -1,0 +1,161 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To Do List</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0; 
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #cad2c5, #84a98c);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #f0f4f0;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+  color: #2f3e46;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #dce3dc;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  color: #2f3e46;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #52796f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #354f52;
+}
+
+ul li {
+  list-style: none;
+  font-size: 21px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  color: #354f52;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ410-IMCQdVmi6aTQSc_f-7z0YIu-BF620qw&s);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #52796f;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(https://cdn.pixabay.com/photo/2014/04/02/10/12/checkbox-303113_1280.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #2f3e46;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: #cad2c5;
+}
+  </style>
+
+  </head>
+
+  <body>
+
+        <div class="container">
+        <div class="todo-app">
+
+        <h2>To-Do List <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTue0FZIC98_H2Qh4vvH53uHQzAuqjIZa9Nbg&shttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTue0FZIC98_H2Qh4vvH53uHQzAuqjIZa9Nbg&s"></h2>
+
+        <div class="row">
+
+        <input type="text" id="input-box" placeholder= "Add Your Text">
+        <button onclick="addTask()">Add</button>
+
+        </div>
+
+        <ul id="list-container">
+
+
+        </ul>
+
+        </div>
+        </div>
+
+        <script src="toDoList.js"></script>       
+
+        </body> 
+        </html>
