@@ -21,27 +21,27 @@ Here are the projects included in my portfolio:
 
 1. **Rock Paper Scissors Game**  
    A fun, interactive JavaScript game where players compete against the computer.  
-  
+   [View Project](RockPaperScissors.html)
 
 2. **Fruit Memory Game**  
    A matching card game using JavaScript and fruit-themed graphics. Great for practicing memory skills!  
-  
+   [View Project](memoryGame.html)
 
 3. **Motivational Quotes Generator**  
    A simple project that displays inspiring quotes at random, built using JavaScript.  
-   
+   [View Project](quotegenerator.html)
 
 4. **Burger Delish Menu**  
    A creative food menu website showing skills in layout and visual design.  
-   
+   [View Project](burgermenu.html)
 
 5. **Password Generator**  
-   Allows for you to generate different types of passwords for the user.
-   
+   Allows the user to generate different examples of passwords.
+   [View Project](passwordgenerator.html)
 
 6. **Black Jack Game**  
-   A fun game created to play rounds of card until there is a winner or a tie. 
-
+   A fun card game rounds are to find a winner with highest points or a tie.  
+   [View Project](blackjack.html)
 
 ## 🔗 Links
 
