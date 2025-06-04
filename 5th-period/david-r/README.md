@@ -10,7 +10,6 @@ This portfolio website is my final project for AP Computer Science Principles. I
 - **Home Page** – A welcome message and intro to the site  
 - **About Me** – Personal interests and background information    
 - **My Projects** – Descriptions and links to class projects  
-- **Pictures** – Picture of my wrestling team and me wrestling
 
 ## Featured Projects
 - **Tic-Tac-Toe**  
@@ -20,8 +19,8 @@ This portfolio website is my final project for AP Computer Science Principles. I
   A digital clock that displays the current time in real time and allows the user to change the background color. It’s a useful app that shows working with time and user input.
 
 - **Red Light Green Light**  
-  Inspired by *Squid Game*, this game challenges players to move only when the light is green. If the player moves while the light is red, the game ends. It’s a fun game that you could take turns playing with friends.
+  This game challenges players to move only when the light is green. If the player moves while the light is red, the game ends. It’s a fun game that you could take turns playing with friends.
 
 ## Links
-- 🔗 [GitHub Repository](https://github.com/David-r01/Final-Project)  
-- 🌐 [Live Website](https://david-r01.github.io/Final-Project/)
+- 🔗 [GitHub Repository](https://github.com/David-r017/Final-Project)  
+- 🌐 [Live Website](https://david-r017.github.io/Final-Project/)
