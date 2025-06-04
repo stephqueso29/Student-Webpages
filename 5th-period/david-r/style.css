@@ -47,10 +47,6 @@ ul {
   list-style: disc;
   padding-left: 1.5rem;
 }
-iframe {
-  margin-top: 1rem;
-  border-radius: 8px;
-}
 .project {
   background: white;
   padding: 1rem 1.5rem;
@@ -58,17 +54,7 @@ iframe {
   margin-bottom: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-img {
-  max-width: 100%;
-  border-radius: 10px;
-}
 footer p {
   margin: 0;
   font-size: 0.9rem;
-}
-.picture-gallery {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
