@@ -14,43 +14,55 @@
     }
 
     body {
-      font-family: 'Comic Sans MS', 'Arial Narrow', Arial, sans-serif;
-      background-color: rgb(40, 107, 109);
+      font-family: 'Comic Sans MS';
       font-size: 20px;
+      background-color: #0e2e30;
       background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210701/pngtree-abstract-low-poly-style-dark-green-background-cyan-background-image_736231.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       margin: 0;
       padding: 0;
-      color: white; 
+      color: white;
     }
 
     h1, h2 {
       color: white;
-      background-color: #2ca2a6; 
+      background-color: #117a7e;
       text-align: center;
       padding: 1rem;
       border-radius: 1.25rem;
-      border: solid 2px #238184; 
+      border: solid 2px #0c5c5f;
       margin-top: 0.25rem;
-      text-shadow: 2px 2px 4px #238184;
+      text-shadow: 2px 2px 4px #063b3e;
     }
 
-    p {
-      text-shadow: 1px 1px 2px #238184;
+    h3, p, li {
+      text-shadow: 1px 1px 1px #063b3e;
+      color: #111;
     }
 
     img {
       width: 20%;
       border-radius: 29px;
-      border: solid #238184 0.1rem;
+      border: solid #0c5c5f 0.1rem;
       margin-top: 0.25rem;
+    }
+
+    .projectimage {
+      display: flex;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #0c5c5f;
     }
 
     a {
       text-decoration: none;
-      color: #134648; 
+      color: #004c4f;
+      text-shadow: 1px 1px 2px #063b3e;
+      font-weight: bold;
     }
 
     a:hover {
@@ -62,7 +74,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: #1e7174;
+      background-color: #012c2e;
       padding: 1rem;
       z-index: 1000;
       text-align: center;
@@ -72,22 +84,38 @@
       margin: 0 1rem;
       color: white;
       font-size: 1.2rem;
+      text-shadow: 1px 1px 2px #000;
     }
 
     .navbar a:hover {
-      color: rgb(44, 162, 166);
+      color: #3bd3d8;
     }
 
     main {
-      margin: 5rem;
+      margin: 5rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
     }
 
     section {
       margin-bottom: 2rem;
       padding: 1rem;
-      border: solid 2px #238184;
-      background-color: #41abae; 
-      border-radius: 4px;
+      border: solid 2px #0c5c5f;
+      background-color: #e0fbfb;
+      border-radius: 8px;
+      min-height: 300px;
+      color: #111;
+    }
+
+    #projects div {
+      border: 1px solid #0c5c5f;
+      background-color: #d0f1f2;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      min-height: 150px;
+      text-shadow: 1px 1px 2px #063b3e;
+      overflow: hidden;
     }
 
     ul, ol {
@@ -96,12 +124,17 @@
     }
 
     footer {
-      background-color: #1e7174;
+      background-color: #012c2e;
       color: white;
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
       font-size: 1rem;
+      font-weight: bold;
+      text-shadow: none;
+    }
+    footer p {
+      color: white;
     }
   </style>
 </head>
@@ -111,6 +144,7 @@
     <a href="#about">About Me</a>
     <a href="#LearningJourney">Learning</a>
     <a href="#projects">Projects</a>
+    <a href="#contacts">Contacts</a>
   </div>
 
   <main>
@@ -123,32 +157,42 @@
 
     <section id="LearningJourney">
       <h2> Learning Journey </h2>
-      <p> Through programming, I’ve learned the basics of C++, HTML, CSS, and JavaScript. I’ve learned how to implement code in many different ways, like loops, arrays, etc. I’ve learned to make my own websites and games with all the knowledge I’ve gained, and even had some fun making them. Preparing for the AP exam, I gained a better understanding of how the internet works, how data is managed, and the impact of technology on our society. APCSP has generally improved my problem solving skills, and it has shown me the importance of computer science. I wouldn’t have the knowledge today if it weren’t for my teacher, Mr. Alvarado, so when you read this, thanks for teaching me man!! 
- </p>
+      <p> Through programming, I’ve learned the basics of C++, HTML, CSS, and JavaScript. I’ve learned how to implement code in many different ways, like loops, arrays, etc. I’ve learned to make my own websites and games with all the knowledge I’ve gained, and even had some fun making them. Preparing for the AP exam, I gained a better understanding of how the internet works, how data is managed, and the impact of technology on our society. APCSP has generally improved my problem solving skills, and it has shown me the importance of computer science. I wouldn’t have the knowledge today if it weren’t for my teacher, Mr. Alvarado, so when you read this, thanks for teaching me man!! </p>
     </section>
 
     <section id="projects">
       <h2> Projects </h2>
 
       <div>
+        <img src="https://thumbs.dreamstime.com/b/slot-machine-icon-vector-design-templates-simple-concept-design-slot-machine-icon-vector-design-templates-264119691.jpg" alt="Casino Project" class="projectimage" />
         <h3> Project 1: C++ Slots and Coinflip </h3>
         <p> Little casino gambling game in C++, has slots and coin flips. Test your luck here! </p>
         <p> <a href="gambling.html"> Slots and Coinflip </a> </p>
       </div>
 
       <div>
+        <img src="https://t3.ftcdn.net/jpg/09/72/39/58/360_F_972395839_wOlUpqE8JZpYhNOGpKrgI6tGSv7di9eo.jpg" class="projectimage"/>
         <h3> Project 2: Hangman </h3>
-        <p> Simple basic hangman game, with categories: videogames, stores, and candy. </p>
+        <p> Simple basic hangman game, guess the letters to create a word before the man is hung, guess between the categories: videogames, stores, and candy. </p>
         <p> <a href="hangman.html"> Hangman</a> </p>
       </div>
 
       <div>
+        <img src="https://t3.ftcdn.net/jpg/12/06/02/44/360_F_1206024484_7rkOptQ6mJ1alnE6Dyv2zGWHGxyXUg4f.jpg" class="projectimage" />
         <h3> Project 3: Squid Game - Red Light Green Light </h3>
         <p> Standard red light green light — move when it's green, don't move when it's red. </p>
         <p> <a href="squidgame.html"> Squid Game </a> </p>
       </div>
     </section>
-    
+
+    <section id="contacts">
+      <h2> Contacts </h2>
+      <p> Feel free to contact me:</p>
+      <ul>
+        <li>Email: <span style="color: #004c4f;">17644@husd.k12.ca.us</span></li>
+        <li>GitHub: <a href="https://github.com/fortniteblaster75" target="_blank">github.com/fortniteblaster75</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>

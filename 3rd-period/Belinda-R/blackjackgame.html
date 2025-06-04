@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <style>
+             body {
+                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+                  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Wt3Up4uuQx7ZPu0DHcYBh3nTeuTZrDwLMA&s");
+                  background-size: cover;
+                  font-weight: bold;
+                  color: white;
+                  text-align: center;
+              }
+
+              h1 {
+                  color: #FFFFFF;
+                   font-family: "sans-serif;
+            font-weight: 500;
+            margin-bottom: 10px;
+            line-height: 33px;
+            background-color: #008000;
+            padding: 10px;
+            border-radius: 5px;
+              }
+
+              #message-el {
+                  font-style: italic;
+                font-family: "century gothic"
+          }
+
+              button {
+                 background-color: #008000;
+            color: #ffffff;
+            width: 145px;
+            margin-bottom: 10px;
+            padding: 7px 7px;
+            border: none;
+            border-radius: 5px;
+            font-family: "century-gothic;
+              }
+          
+           #newCardButton {
+            background-color: #D61324;
+            color: #ffffff;
+            width: 145px;
+             font-weight:100;
+            margin-bottom: 10px;
+            padding: 7px 7px;
+            border: none;
+            border-radius: 5px;
+            font-family: "century-gothic";
+        }
+        </style>
+    </head>
+    <body>
+        <h1>BLACKJACK</h1>
+        <p id="message-el">Want to play a round?</p>
+        <p id="cards-el">Cards:</p>
+        <p id="sum-el">Sum:</p>
+        <button onclick="startGame()">START GAME</button>
+        <button id="newCardButton" onclick="newCard()">NEW CARD</button>
+        <p id="player-el"></p>
+      <div>
+        <p id="blackjack"> How many times you've won: </p>
+        <script>
+          let cards = []
+          let sum = 0
+          let hasBlackJack = false
+          let isAlive = false
+          let message = ""
+
+          const messageEl = document.getElementById("message-el")
+          const sumEl = document.getElementById("sum-el")
+          const cardsEl = document.getElementById("cards-el")
+          const playerEl = document.getElementById("player-el")
+          
+     
+          
+         
+
+
+          //add your name to the player-el text content using JavaScript check to see how we did that for the password generator if you're not sure where to start    DONE
+               playerEl.textContent = " Belinda "
+
+
+         
+          //create a function called getRandomCard()
+          //the function should generate a random number between 1 - 13
+          //if the number is greater than 10 return 10
+          // if the number is equal to 1 return 11
+          // else return the random number and close out the function
+          
+           function getRandomCard(){
+             let cardValue = Math.floor(Math.random() * 13)+1;
+             
+            if (cardValue > 10){
+              return 10;
+            }
+             
+             else if (cardValue === 1){
+               return 11;
+             }
+             
+             else {
+             return cardValue;}
+          }
+
+
+          //next create a startGame() function DONE
+ function startGame(){
+   isAlive = true;
+   hasBlackJack = false;
+   let firstCard = getRandomCard();
+   let secondCard = getRandomCard();
+   cards = [firstCard,secondCard];
+   sum = firstCard + secondCard;
+   renderGame();
+ }
+          
+          //we have a variable at the top that we have created that tells us if the user is alive
+          //when the game starts you should assign it a value, I will let you determine what value to assign it (hint: its a Boolean)
+          // we also have two card variables, when we start the game you should assign it a random value
+          // luckily we created a function that generates random numbers between 1 - 13
+          // after you have done that you can add the first and second card to your array you can do this by reassigning them to the array
+          // then make sure you update the current sum that the user has
+          // lastly you will call a function that we will create called renderGame()
+          let blackJackCount = 0;
+          
+          function renderGame(){
+            cardsEl.textContent= "Cards: ";
+            for (let i = 0; i < cards.length;i++){
+              cardsEl.textContent += cards[i] + " ";
+            }
+            sumEl.textContent = "Sum: " +sum;
+            if(sum < 21){
+              message = "Do you want to draw more cards?";
+            } 
+            else if (sum === 21){
+              hasBlackJack = true; 
+              message = "YOU WON!!";
+              isAlive = false;
+            }
+            else{
+              message = "You have lost! Pay up!";
+              isAlive = false;
+            }
+            messageEl.textContent = message;
+          }
+          
+     
+          function blackJackCounter(){
+            if (hasBlackJack = true){
+              blackJackCount++;
+            }
+          }
+          // you can then close the start game function
+
+
+          //Now you will create the renderGame() function, which will render our game for us
+          // the first thing we want to do is assign to our cardsEl element/variable this string "Cards: ";
+          // next we want to loop through our cards array, this very similar to c++
+          // in the loop we want to add (concatenate) to that same cards element the value of our cards
+          // (hint: you can add the value of the cards by iterating through the array and indexing the values)
+          // make sure the values are spaces out, now you can close the loop
+          // next we will modify the text content for the sumEl to output "Sum: " + the actual sum variable
+          // now we want to make sure we add some logic to our game (the rules of the game)
+          // if the value the player has is less than 21 we should ask them if they want to draw a new card
+          // else if its equal to 21 we should tell them they have blackjack and now we should update a variable we declared at the top but have not used yet
+          // else that means there's one condition left which would be that the user is out of the game and we should tell them that and we should update isAlive
+          // lastly we should update the messageEl text content to contain the message that you generated in the if statements
+          // now you can close the function
+
+  function newCard(){
+       renderGame();
+    if(isAlive == true){
+      let card = getRandomCard();
+      sum += card;
+      cards.push(card);
+      renderGame();
+    }
+    
+  }
+
+          // The last function we have to create is called drawCard()
+          // in this function we have to check if the user is still in the game
+          // if they are in the game and they don't have blackjack then they can draw a card
+          // you should create a new variable called card and assign it a random number between 1-13
+          // don't forget to update the sum variable (hint: the new card would become part of the sum)
+          // then you will push a value to your cards array (this will add a new value to the end of your array)
+          // the way you do this is by saying the nameOfArray.push(in here you put the value you want to add to the array)
+          // so for our array it would look like this cards.push(You need to figure out what value to insert in here)
+          // lastly we will call the renderGame() and close out the if statement and we can also close the function
+
+
+          // Now you have all of your functions ready to go for the game to work
+          // the only thing you have to do is map them to your buttons.
+          // when the user clicks start game something should happen
+          // when the user clicks new card something else should happen
+          // if the user is out of the game and they try to draw a card nothing should happen unless they start game again
+          // but that part should already be taken care of in one of the functions you created.
+          // as for what happens when the user clicks the buttons that's also already been taken care of you just need to make sure it happens when the button is clicked
+          // if you're not sure how to map it to a button, google addEventListener and try to figure out how to make something happen when the user clicks the button
+
+          //Make sure your statements use semicolons at the end
+          // Make sure your code is properly indented
+          // At this point your game should be up and running!
+          // Congrats you have created your first game!
+          // Personalize the webpage and change the CSS styles
+          // Make sure you submit a link to your game so that I can check the functionality and see the styles provided
+
+      </script>
+    </body>
+</html>
+
+

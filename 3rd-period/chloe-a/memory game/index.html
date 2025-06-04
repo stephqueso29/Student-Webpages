@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Memory Game | JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Memory Game</h2>
+		<div class="game"></div>
+		<button class="reset" onclick="window.location.reload(true);">Reset Game</button>
+	</div>
+
+	<script>
+		const emojis = ["💌","⭐","🍓","👾","🌸","🧩","🎁","💚","💌","⭐","🍓","👾","🌸","🧩","🎁","💚"];
+		const shuf_emojis = [...emojis].sort(() => 0.5 - Math.random());
+
+		for (let i = 0; i < shuf_emojis.length; i++) {
+			let box = document.createElement('div');
+			box.className = 'item';
+			box.innerHTML = shuf_emojis[i];
+
+			box.onclick = function () {
+				if (this.classList.contains('boxOpen') || this.classList.contains('boxMatch')) {
+					return; // prevent clicking already open or matched boxes
+				}
+
+				this.classList.add('boxOpen');
+
+				const openedBoxes = document.querySelectorAll('.boxOpen');
+				if (openedBoxes.length === 2) {
+					setTimeout(() => {
+						if (openedBoxes[0].innerHTML === openedBoxes[1].innerHTML) {
+							openedBoxes[0].classList.add('boxMatch');
+							openedBoxes[1].classList.add('boxMatch');
+						}
+						openedBoxes[0].classList.remove('boxOpen');
+						openedBoxes[1].classList.remove('boxOpen');
+
+						if (document.querySelectorAll('.boxMatch').length === emojis.length) {
+							alert('You win!');
+						}
+					}, 1000);
+				}
+			};
+
+			document.querySelector('.game').appendChild(box);
+		}
+	</script>
+</body>
+</html>
