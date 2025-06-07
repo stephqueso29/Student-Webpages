@@ -30,5 +30,5 @@ My portfolio site includes:
   This game was my final project for this class and was completed solo without outside help. I used HTML, CSS, and Java script to make this game and turned it into the College Board. When playing, there are two separate game modes: one where you can pick the secret number, and one where it is computer-generated. After you guess a random number from 1-100, it will tell you whether it is higher or lower until the correct number is submitted.
 ## 🔗 Links
 
-- **GitHub Repository**: [https://github.com/koby-riv12/Final-Project](https://github.com/kodynguyen18/final-project)  
-- **Live Site on GitHub Pages**: [https://koby-riv12.github.io/Final-Project/](https://koby-riv12.github.io/Final-Project/)
+- **GitHub Repository**: [https://github.com/kodynguyen18/final-project](https://github.com/kodynguyen18/final-project)  
+- **Live Site on GitHub Pages**: [https://kodynguyen18.github.io/final-project/](https://kodynguyen18.github.io/final-project/)
