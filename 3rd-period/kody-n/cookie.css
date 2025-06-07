@@ -1,0 +1,33 @@
+body {
+  text-align: center;  /* aligns all text to center */
+  font-family: Arial, sans-serif;  /* font slection */
+  background-image: url("https://wallpapercave.com/wp/wp7667538.jpg") /* background */
+}
+h1 {
+  color: white;  
+}
+.cookie {
+  width: 150px;  /* cookie size */
+  cursor: pointer;  /* changes cursor when hovering cookie */
+  transition: opacity 0.2s ease; /* cookie slowly goes away when clicked */
+}
+
+.container {
+  margin-top: 50px; /* distance between top */
+}
+
+.button {
+  padding: 10px 20px; /* button size */
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px; /* button distance from cookie */
+}
+
+.rank {  /* rank settings */
+  position: absolute;  /* position never changes */
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
