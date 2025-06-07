@@ -1,55 +1,33 @@
 body {
-  margin: 0;
-  background-color: #c7f1f8;
-  font-family: 'Poppins', sans-serif;
+  text-align: center;  /* aligns all text to center */
+  font-family: Arial, sans-serif;  /* font slection */
+  background-image: url("https://wallpapercave.com/wp/wp7667538.jpg") /* background */
+}
+h1 {
+  color: white;  
+}
+.cookie {
+  width: 150px;  /* cookie size */
+  cursor: pointer;  /* changes cursor when hovering cookie */
+  transition: opacity 0.2s ease; /* cookie slowly goes away when clicked */
 }
 
-
-.div-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-auto-rows: minmax(150px, auto);
-  grid-template-areas:
-    "one one"
-    "two three"
-    "four five"
-    "six seven"
-    "eight nine";
-  gap: 20px;
-  padding: 20px;
-  color: #fff; 
+.container {
+  margin-top: 50px; /* distance between top */
 }
 
-.div-wrapper > div {
-  border-radius: 20px;
-  padding: 15px;
-  background-color: #2e0371;
-  border: 2px solid black;
+.button {
+  padding: 10px 20px; /* button size */
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px; /* button distance from cookie */
 }
 
-.div-wrapper > div:hover {
-  transform: scale(1.02);
-  background-color: #DA667B;
-  transition: 0.9s;
-}
-
-.one {
-  grid-area: one
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 10px;
-  border-radius: 6px;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-}
-
-h3 {
-  margin-top: 0;
-  font-weight: 700;
-  font-size: 1.95rem;
-  color: #ffffff;
+.rank {  /* rank settings */
+  position: absolute;  /* position never changes */
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
 }
