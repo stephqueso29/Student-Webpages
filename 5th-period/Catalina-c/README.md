@@ -34,8 +34,8 @@ A random poem and quote generator created with JavaScript, allowing users to cyc
 
 ## Links
 
-- GitHub Repository: [(https://github.com/CatalinaCh5/CatalinaCh5.Github.io)]
-- Live Site: [(https://catalinach5.github.io/)]
+- [GitHub Repository](https://github.com/CatalinaCh5/CatalinaCh5.Github.io)
+- [Live Site](https://catalinach5.github.io/)
 
 ---
 

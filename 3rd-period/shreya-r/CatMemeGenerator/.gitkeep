@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Meme Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cat Meme Generator</h1>
+
+        <div class="button-container">
+            <button id="happyCatBtn">Happy Cat</button>
+            <button id="madCatBtn">Mad Cat</button>
+            <button id="surprisedCatBtn">Surprised Cat</button>
+            <button id="sadCatBtn">Sad Cat</button>
+        </div>
+
+        <div class="meme-display">
+            <img id="memeImage" src="" alt="Cat Meme">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: "Garamond", serif;
+    background-color: #000500;
+    text-align: center;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpQIko2vrbgJUNORJZHBZOSIGaPDZoP-BFrzLjdZRT7weBI2zJwKr2EGjZl8V1cAsl4PI&usqp=CAU);
+  
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(173, 216, 230);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: "Times New Roman", serif
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #2C7DA0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #A379C9;
+}
+
+.meme-display {
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+}
+
+</style>
+
+<script>
+  const happyCatMemes = [
+    'https://media.tenor.com/Cse00b9Ls-4AAAAM/goobers.gif', 
+    'https://images.chesscomfiles.com/uploads/v1/blog/909321.2483cbfe.668x375o.0055951b5173@2x.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzFQ_25XavOa5HtNdUDxYyFE3mqx-t3Rft6w&s',
+    'https://preview.redd.it/ph6px2drilw71.png?auto=webp&s=f9bd73ed65253891302dca838992a0cdcd0cca6b',
+    'https://i.imgflip.com/9amg6.jpg?a483912',
+    'https://media.tenor.com/JWFEQcWcJyQAAAAM/happy-catto-cats.gif',
+    'https://assets.epuzzle.info/puzzle/079/716/original.jpg',
+]; // happy cat pictures
+
+const madCatMemes = [
+    'https://i.redd.it/cbd801fa2l781.jpg',  'https://i.pinimg.com/564x/1a/c0/23/1ac0231aa6d74d092328d445aa98183e.jpg',
+    'https://media.tenor.com/0n62MvZZHxkAAAAM/dungg.gif', 
+    'https://i.pinimg.com/474x/64/6b/af/646baf16ffbcc38037dfa7bfb79a9fa8.jpg',
+    'https://i.pinimg.com/736x/f2/09/9a/f2099ab7aa48240b8da2b8e618068023.jpg',
+    'https://tr.rbxcdn.com/180DAY-e206530a5712708d08fdeafa8dd0c464/420/420/Hat/Webp/noFilter',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9l77vigF4-lhwdYpPqhtA8RkRrOX0i4HCNg&s',
+    'https://tr.rbxcdn.com/180DAY-1c161c8fe339ce1e5388a4170f0c9286/420/420/Hat/Png/noFilter',
+]; // mad cat pictures
+
+const surprisedCatMemes = [
+    'https://media1.giphy.com/media/GRk3GLfzduq1NtfGt5/giphy_s.gif?cid=6c09b952yp90bfyuyr6mf1l3vfoxw17n21aoi4pbl6m3s2om&ep=v1_gifs_search&rid=giphy_s.gif&ct=g', 
+    'https://i.imgflip.com/7e296s.jpg?a483912',
+    'https://preview.redd.it/i-found-the-origin-to-the-surprised-cat-picture-v0-kwn1j77kzd2e1.jpg?width=1080&format=pjpg&auto=webp&s=b81e4c91759f4367f2b5de2f96bcd239056ed527',
+    'https://i.imgflip.com/9ebdz.jpg?a484056',
+    'https://i.redd.it/r8m1yv2gz7f61.jpg',
+    'https://media4.giphy.com/media/vSSdLSLbGIXio/giphy_s.gif?cid=6c09b952ht221ypm9k738vacgg3woxwvt8cu6x85ww3lac9b&ep=v1_gifs_search&rid=giphy_s.gif&ct=g',
+    'https://pbs.twimg.com/profile_images/1280227739312807936/aTmVXPao_400x400.jpg',
+]; // surprised cat pictures
+
+const sadCatMemes = [
+    'https://media.tenor.com/Y3j6d3RoSEoAAAAM/sad-cat-content-aware-scale.gif', 
+    'https://en.meming.world/images/en/d/d0/Crying_Cat.jpg', 
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpr352zc1GjLxSx_Exj551nutMFxoEXTH7aA&s',
+    'https://images3.memedroid.com/images/UPLOADED680/652ea9ff787c9.jpeg',
+    'https://i.redd.it/icd5o13nm8lc1.jpeg',
+    'https://i.pinimg.com/236x/10/2b/e3/102be3e09ec2353430f93112fb0569d7.jpg', 
+    'https://pbs.twimg.com/media/EbKRH80WoAA5kGK.jpg',
+]; //sad cat pictures
+
+
+const memeImage = document.getElementById('memeImage');
+const happyCatBtn = document.getElementById('happyCatBtn');
+const madCatBtn = document.getElementById('madCatBtn');
+const surprisedCatBtn = document.getElementById('surprisedCatBtn');
+const sadCatBtn = document.getElementById('sadCatBtn');
+
+
+// function to get a random meme from a given category
+function getRandomMemeFromCategory(category) {
+    const randomIndex = Math.floor(Math.random() * category.length);
+    memeImage.src = category[randomIndex];
+}
+
+// add event listeners to the buttons
+happyCatBtn.addEventListener('click', () => getRandomMemeFromCategory(happyCatMemes));
+madCatBtn.addEventListener('click', () => getRandomMemeFromCategory(madCatMemes));
+surprisedCatBtn.addEventListener('click', () => getRandomMemeFromCategory(surprisedCatMemes));
+sadCatBtn.addEventListener('click', () => getRandomMemeFromCategory(sadCatMemes));
+
+</script>

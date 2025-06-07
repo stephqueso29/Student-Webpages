@@ -1,0 +1,44 @@
+
+body {
+  background-color: black;
+  color: #c0c0c0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#introScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: black;
+  text-align: center;
+}
+
+#startButton {
+  background-color: #28a745;
+  color: black;
+  padding: 15px 40px;
+  font-size: 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+#startButton:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+#game-container {
+  display: none;
+  text-align: center;
+}
+

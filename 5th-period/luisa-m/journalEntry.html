@@ -1,0 +1,176 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Journal Entry Website</title>
+ 
+   <style>
+   * {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #cad2c5;
+  background-image: url(https://img.freepik.com/premium-photo/feminine-aesthetic-clipart-png-pink-essentials-illustration-set_53876-1046885.jpg?semt=ais_hybrid);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 35%;
+  padding: 1rem;
+  border-right: 2px solid #52796f;
+  overflow-y: auto;
+  background-color: rgba(207, 222, 212, 0.8);
+}
+
+.sidebar h3 {
+  color: #2f3e46;
+  font-size: 1.5rem;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+  background: #f0f4f2;
+  padding: 0.75rem;
+  border: 1px solid #84a98c;
+  border-radius: 8px;
+}
+
+.sidebar button {
+  margin-top: 0.5rem;
+  background-color: #52796f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.sidebar button:hover {
+  background-color: #84a98c;
+}
+
+.journal-preview {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  color: #2f3e46;
+}
+
+.journal-container {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f0f4f2;
+}
+
+.journal-container h2 {
+  color: #2f3e46;
+  margin-bottom: 20px;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+#title-box,
+#entry-body {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #354f52;
+  font-family: "Oxanium", sans-serif;
+  background-color: #ffffff;
+  color: #2f3e46;
+}
+
+#entry-body {
+  height: 200px;
+  resize: vertical;
+  background: #cad2c5;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #52796f;
+  color: white;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+button:hover {
+  background-color: #84a98c;
+}
+
+#journal-heading {
+  margin-bottom: 1rem;
+  background: #ffffff;
+  padding: 0.75rem;
+  border: 1px solid #84a98c;
+  border-radius: 8px;
+  color: #354f52;
+}
+  </style>
+  
+  </head>
+  
+<body>
+    <div class="main-container">
+
+    <div class="sidebar">
+      <h3>Saved Entries</h3>
+      <ul id="entries-list"></ul> 
+    </div>
+
+    <div class="journal-container">
+      <h2 id="journal-heading">Today's Journal</h2> 
+
+      <input type="text" id="title-box" placeholder="Title...">
+
+      <textarea id="entry-body" placeholder="Write your journal..."></textarea>
+
+      <div class="buttons">
+        <button onclick="saveEntry()">Save</button>
+        <button onclick="eraseEntry()">Erase</button>
+      </div>
+      </div>
+
+      </div>
+
+  <script src="journalEntry.js"></script>       
+    
+  </body> 
+  </html>

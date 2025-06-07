@@ -36,9 +36,3 @@ If you're feeling an emotion strongly then try this cat image generator to match
 ---
 
 Thank you for checking out my final project portfolio!
-
-
-
-
-
-

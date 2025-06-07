@@ -1,0 +1,132 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+/*  displays the font, bachground and make the container center in the game mode */
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+/* the container make the apperances of it being just white and adding padding around to make it aesthetic */
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+/* helps to rearrange the color buttons in the correct order */
+
+.color-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+/* displays the looks of the button with colors */
+
+.color-button:active,
+.color-button.active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+/*included the background colors!  */
+#red {
+  background-color: #ff4d4d;
+}
+#green {
+  background-color: #5cb85c;
+}
+#blue {
+  background-color: #5bc0de;
+}
+#yellow {
+  background-color: #f0ad4e;
+}
+#purple {
+  background-color: #94618e;
+}
+#orange {
+  background-color: #f08a5d;
+}
+/*add styles to levels score & start button/next  */
+.controls p,
+.controls button {
+  margin-bottom: 10px;
+}
+/* displays the buttons format */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* added transparent background color that overlays the game */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+}
+/* displays the looks of the white container within the modal */
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+/* displays the looks of the buttons */
+.modal-content h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #555;
+  margin-bottom: 20px;
+}
+/*next level button  */
+#next-level-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+/* hover button */
+#next-level-button:hover {
+  background-color: #1e7e34;
+}
