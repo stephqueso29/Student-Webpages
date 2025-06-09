@@ -165,8 +165,7 @@ A `README.md` file is a special file used to describe what your project is, how 
 
 ### ✅ Use the Prompt Below to Generate Your `README.md` File Using ChatGPT
 
-> 💡 **Note from Mr. Alvarado:**  
-> AI is a huge component in computer science, and learning to use it as a tool to accelerate your learning is essential. When used responsibly, AI can be a powerful assistant that helps you learn, grow, and become a better developer.
+> 💡 AI is a huge component in computer science, and learning to use it as a tool to accelerate your learning is essential. When used responsibly, AI can be a powerful assistant that helps you learn, grow, and become a better developer.
 
 Please make sure to **update the example links in the prompt before pasting** it into ChatGPT — this ensures that the AI includes your actual GitHub repo and live site.  
 If you forget to update them, ChatGPT may include placeholders or incorrect links.
