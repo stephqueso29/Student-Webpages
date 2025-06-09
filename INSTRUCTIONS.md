@@ -67,12 +67,12 @@ Use CSS Grid to organize your layout cleanly.
 CSS
 ```
 .container {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-grid-template-areas:
-"header header"
-"sidebar content"
-"footer footer";
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  "header header"
+  "sidebar content"
+  "footer footer";
 }
 .header { grid-area: header; }
 .sidebar { grid-area: sidebar; }
@@ -87,11 +87,11 @@ grid-template-areas:
 CSS
 ```
 .container {
-grid-template-columns: repeat(6, 1fr);
-grid-template-areas:
-"header header header header header header"
-"sidebar sidebar content content content content"
-"footer footer footer footer footer footer";
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+  "header header header header header header"
+  "sidebar sidebar content content content content"
+  "footer footer footer footer footer footer";
 }
 ```
 
